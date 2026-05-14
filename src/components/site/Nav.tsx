@@ -1,0 +1,50 @@
+import { motion } from "motion/react";
+import logo from "@/assets/logo.png";
+
+const links = [
+  { href: "#about", label: "About" },
+  { href: "#program", label: "Program" },
+  { href: "#upcoming", label: "Upcoming" },
+  { href: "#speakers", label: "Past Speakers" },
+  { href: "#fellows", label: "Fellows" },
+  { href: "#contact", label: "Contact" },
+];
+
+export function Nav() {
+  return (
+    <motion.header
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed top-0 inset-x-0 z-50"
+    >
+      <div className="mx-auto mt-4 max-w-6xl px-4">
+        <div className="glass rounded-full flex items-center justify-between px-3 py-2.5">
+          <a href="#top" className="flex items-center gap-2.5 pl-2">
+            <img src={logo} alt="AI for ASEAN" className="h-8 w-8" />
+            <span className="font-semibold tracking-tight text-sm hidden sm:block">
+              AI for <span className="text-gradient">ASEAN</span>
+            </span>
+          </a>
+          <nav className="hidden md:flex items-center gap-1 text-sm">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="px-3 py-1.5 rounded-full text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <a
+            href="#apply"
+            className="bg-gradient-brand animate-gradient text-white text-sm font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
+          >
+            Apply →
+          </a>
+        </div>
+      </div>
+    </motion.header>
+  );
+}
