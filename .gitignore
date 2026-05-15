@@ -43,3 +43,4 @@ next-env.d.ts
 # agent environment
 openspec/
 .opencode/
+.playwright-mcp/
