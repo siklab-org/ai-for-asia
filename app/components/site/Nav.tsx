@@ -18,7 +18,7 @@ export function Nav() {
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="glass rounded-full flex items-center justify-between px-3 py-2.5"
+          className="glass backdrop-blur-sm rounded-full flex items-center justify-between px-3 py-2.5"
         >
           <a href="#top" className="flex items-center gap-2.5 pl-2">
             <Image
