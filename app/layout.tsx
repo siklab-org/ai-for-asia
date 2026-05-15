@@ -22,37 +22,43 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-for-asia.vercel.app"),
   title: {
-    default: "AI for ASEAN — Learn, Lead, Innovate with AI",
-    template: "%s | AI for Asia",
+    default: "AI for ASIA",
+    template: "%s | AI for ASIA",
   },
   description:
-    "A regional fellowship empowering young leaders across ASEAN to thrive in an AI-driven future.",
-  keywords: ["AI", "ASEAN", "fellowship", "leadership", "innovation", "technology"],
-  openGraph: {
+    "A regional fellowship empowering young leaders across Asia to thrive in an AI-driven future.",
+  keywords: [
+    "AI",
+    "Asia",
+    "fellowship",
+    "leadership",
+    "innovation",
+    "technology",
+  ],
+openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ai-for-asia.vercel.app",
-    siteName: "AI for Asia",
-    title: "AI for ASEAN — Learn, Lead, Innovate with AI",
+    siteName: "AI for ASIA",
+    title: "AI for ASIA — Learn, Lead, Innovate with AI",
     description:
-      "A regional fellowship empowering young leaders across ASEAN to thrive in an AI-driven future.",
+      "A regional fellowship empowering young leaders across Asia to thrive in an AI-driven future.",
     images: [
       {
-        url: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d15e95b6-c733-4d60-9c1b-6797d88ca871/id-preview-6f76078d--dfa418ce-9d9a-43b5-8ad7-388c9e34abd3.lovable.app-1778760594873.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI for Asia preview",
+        alt: "AI for ASIA preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI for ASEAN — Learn, Lead, Innovate with AI",
+    title: "AI for ASIA — Learn, Lead, Innovate with AI",
     description:
-      "A regional fellowship empowering young leaders across ASEAN to thrive in an AI-driven future.",
-    images: [
-      "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d15e95b6-c733-4d60-9c1b-6797d88ca871/id-preview-6f76078d--dfa418ce-9d9a-43b5-8ad7-388c9e34abd3.lovable.app-1778760594873.png",
-    ],
+      "A regional fellowship empowering young leaders across Asia to thrive in an AI-driven future.",
+    images: ["/og-image.png"],
+    site: "@AIforAsia",
   },
   alternates: {
     canonical: "/",
@@ -69,22 +75,34 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} h-full antialiased`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full">{children}</body>
-      <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "AI for Asia",
+          name: "AI for ASIA",
           url: "https://ai-for-asia.vercel.app",
-          logo: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d15e95b6-c733-4d60-9c1b-6797d88ca871/id-preview-6f76078d--dfa418ce-9d9a-43b5-8ad7-388c9e34abd3.lovable.app-1778760594873.png",
+          logo: "https://ai-for-asia.vercel.app/og-image.png",
         })}
       </Script>
-      <Script id="website-schema" type="application/ld+json" strategy="afterInteractive">
+      <Script
+        id="website-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+      >
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "AI for Asia",
+          name: "AI for ASIA",
           url: "https://ai-for-asia.vercel.app",
           potentialAction: {
             "@type": "SearchAction",
