@@ -199,13 +199,18 @@ function SpeakerCard({
           <div className="text-xs text-white/60 mt-1 truncate">
             {speaker.role}
           </div>
-          <div className="mt-3 relative h-[30px]">
-            <Image
-              src={speaker.logo}
-              alt=""
-              fill
-              className="object-contain object-left"
-            />
+          <div className="mt-3">
+            <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
+              <div className="relative h-10 w-[130px]">
+                <Image
+                  src={speaker.logo}
+                  alt=""
+                  fill
+                  sizes="130px"
+                  className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -301,13 +306,18 @@ function SpeakerModal({
               </div>
 
               {/* Logo */}
-              <div className="relative h-7 w-[120px] mt-4">
-                <Image
-                  src={speaker.logo}
-                  alt=""
-                  fill
-                  className="object-contain object-left opacity-80"
-                />
+              <div className="mt-4">
+                <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
+                  <div className="relative h-9 w-[140px]">
+                    <Image
+                      src={speaker.logo}
+                      alt=""
+                      fill
+                      sizes="140px"
+                      className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
+                    />
+                  </div>
+                </div>
               </div>
 
               <hr className="my-5 border-white/10" />
@@ -348,8 +358,8 @@ export function Speakers() {
             </div>
             <Reveal delay={0.2}>
               <div className="text-sm text-muted-foreground max-w-xs">
-                Speakers from previous cohorts — the UN, Microsoft, Oxford, and ASEAN's
-                leading institutions.
+                Speakers from previous cohorts — the UN, Microsoft, Oxford, and
+                ASEAN&aposs leading institutions.
               </div>
             </Reveal>
           </div>
