@@ -10,14 +10,15 @@ export function Partners() {
         </Reveal>
         <Reveal delay={0.1}>
           <div className="mt-8 flex justify-center">
-            <Image
-              src="/scraped/partners.png"
-              alt="Partners"
-              width={672}
-              height={200}
-              className="max-w-2xl w-full opacity-90 hover:opacity-100 transition-opacity"
-              style={{ filter: "invert(1) hue-rotate(180deg) brightness(1.1) contrast(1.1)" }}
-            />
+            <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-xl px-6 py-4 border border-white/20 shadow-sm">
+              <Image
+                src="/scraped/partners.png"
+                alt="Partners"
+                width={672}
+                height={200}
+                className="max-w-2xl w-full opacity-90 hover:opacity-100 transition-opacity"
+              />
+            </div>
           </div>
         </Reveal>
       </div>
