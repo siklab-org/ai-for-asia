@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import localImage from "./og-image.png";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aiforasia.vercel.app"),
+  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3001"),
   title: {
     default: "AI for ASIA",
     template: "%s | AI for ASIA",
@@ -35,10 +36,10 @@ export const metadata: Metadata = {
     "innovation",
     "technology",
   ],
-openGraph: {
+  openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://aiforasia.vercel.app",
+    url: process.env.SITE_URL || "http://localhost:3001",
     siteName: "AI for ASIA",
     title: "AI for ASIA — Learn, Lead, Innovate with AI",
     description:
@@ -90,8 +91,8 @@ export default function RootLayout({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "AI for ASIA",
-          url: "https://aiforasia.vercel.app",
-          logo: "https://aiforasia.vercel.app/og-image.png",
+          url: process.env.SITE_URL,
+          logo: `${process.env.SITE_URL}/og-image.png`,
         })}
       </Script>
       <Script
@@ -103,10 +104,10 @@ export default function RootLayout({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "AI for ASIA",
-          url: "https://aiforasia.vercel.app",
+          url: process.env.SITE_URL,
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://aiforasia.vercel.app?q={search_term_string}",
+            target: `${process.env.SITE_URL}?q={search_term_string}`,
             "query-input": "required name=search_term_string",
           },
         })}
