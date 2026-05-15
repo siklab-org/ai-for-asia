@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ai-for-asia.vercel.app"),
+  metadataBase: new URL("https://aiforasia.vercel.app"),
   title: {
     default: "AI for ASIA",
     template: "%s | AI for ASIA",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ai-for-asia.vercel.app",
+    url: "https://aiforasia.vercel.app",
     siteName: "AI for ASIA",
     title: "AI for ASIA — Learn, Lead, Innovate with AI",
     description:
@@ -90,8 +90,8 @@ export default function RootLayout({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "AI for ASIA",
-          url: "https://ai-for-asia.vercel.app",
-          logo: "https://ai-for-asia.vercel.app/og-image.png",
+          url: "https://aiforasia.vercel.app",
+          logo: "https://aiforasia.vercel.app/og-image.png",
         })}
       </Script>
       <Script
@@ -103,10 +103,10 @@ export default function RootLayout({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "AI for ASIA",
-          url: "https://ai-for-asia.vercel.app",
+          url: "https://aiforasia.vercel.app",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://ai-for-asia.vercel.app?q={search_term_string}",
+            target: "https://aiforasia.vercel.app?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         })}
