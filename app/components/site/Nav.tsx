@@ -29,7 +29,7 @@ export function Nav() {
               className="h-8 w-8"
             />
             <span className="font-semibold tracking-tight text-sm hidden sm:block">
-              AI for <span className="text-gradient">ASEAN</span>
+              AI for <span className="text-gradient">ASIA</span>
             </span>
           </a>
           <nav className="hidden md:flex items-center gap-1 text-sm">

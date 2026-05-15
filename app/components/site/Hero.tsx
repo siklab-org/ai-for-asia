@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="top"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Animated gradient backdrop */}
       <div className="absolute inset-0 bg-gradient-radial animate-gradient" />
       <div className="absolute inset-0 grid-bg opacity-50" />
@@ -40,8 +43,12 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]"
         >
-          Unlock<br />
-          <span className="text-gradient animate-gradient">Asia's Future</span><br />
+          Unlock
+          <br />
+          <span className="text-gradient animate-gradient">
+            Asia&apos;s Future
+          </span>
+          <br />
           <span className="text-muted-foreground/60">with AI.</span>
         </motion.h1>
 
@@ -51,7 +58,8 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 max-w-xl text-lg md:text-xl text-muted-foreground"
         >
-          Learn. Lead. Innovate. A 10-week regional program for the next generation of ASEAN leaders.
+          Learn. Lead. Innovate. A 8-week regional program for the next
+          generation of ASEAN leaders.
         </motion.p>
 
         <motion.div
@@ -81,10 +89,15 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 1 }}
           className="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2 animate-float"
         >
-          <Image src="/logo.png" alt="" width={288} height={288} className="h-72 w-72 drop-shadow-2xl" />
+          <Image
+            src="/logo.png"
+            alt=""
+            width={288}
+            height={288}
+            className="h-72 w-72 drop-shadow-2xl"
+          />
         </motion.div>
       </div>
-
     </section>
   );
 }

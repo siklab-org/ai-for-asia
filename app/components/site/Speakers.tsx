@@ -359,7 +359,7 @@ export function Speakers() {
             <Reveal delay={0.2}>
               <div className="text-sm text-muted-foreground max-w-xs">
                 Speakers from previous cohorts — the UN, Microsoft, Oxford, and
-                ASEAN&aposs leading institutions.
+                ASEAN&apos;s leading institutions.
               </div>
             </Reveal>
           </div>
