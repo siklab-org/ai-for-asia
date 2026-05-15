@@ -7,14 +7,14 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <Image
             src="/logo.png"
-            alt="AI for ASEAN"
+            alt="AI for ASIA"
             width={36}
             height={36}
             className="h-9 w-9"
           />
           <div>
             <div className="font-semibold">
-              AI for <span className="text-gradient">ASEAN</span>
+              AI for <span className="text-gradient">ASIA</span>
             </div>
             <div className="text-xs text-muted-foreground">
               Learn · Lead · Innovate

@@ -23,7 +23,7 @@ export function Nav() {
           <a href="#top" className="flex items-center gap-2.5 pl-2">
             <Image
               src="/logo.png"
-              alt="AI for ASEAN"
+              alt="AI for ASIA"
               width={32}
               height={32}
               className="h-8 w-8"
