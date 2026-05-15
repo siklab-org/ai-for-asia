@@ -5,7 +5,8 @@
 
 @theme inline {
   --font-sans: "Neue Montreal", "Space Grotesk", "Inter", system-ui, sans-serif;
-  --font-display: "Neue Montreal", "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-display:
+    "Neue Montreal", "Space Grotesk", "Inter", system-ui, sans-serif;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -52,11 +53,11 @@
 
   --gradient-brand: linear-gradient(
     115deg,
-    #0060BA 0%,
-    #336FCF 25%,
-    #8561C5 55%,
-    #C671AF 80%,
-    #E39297 100%
+    #0060ba 0%,
+    #336fcf 25%,
+    #8561c5 55%,
+    #c671af 80%,
+    #e39297 100%
   );
   --gradient-brand-soft: linear-gradient(
     135deg,
@@ -64,21 +65,22 @@
     rgba(133, 97, 197, 0.18) 50%,
     rgba(227, 146, 151, 0.18) 100%
   );
-  --gradient-radial: radial-gradient(
-    circle at 20% 20%,
-    rgba(51, 111, 207, 0.35),
-    transparent 55%
-  ),
-  radial-gradient(
-    circle at 80% 30%,
-    rgba(198, 113, 175, 0.3),
-    transparent 50%
-  ),
-  radial-gradient(
-    circle at 50% 90%,
-    rgba(227, 146, 151, 0.28),
-    transparent 55%
-  );
+  --gradient-radial:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(51, 111, 207, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(198, 113, 175, 0.3),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(227, 146, 151, 0.28),
+      transparent 55%
+    );
 
   --shadow-glow: 0 30px 80px -20px rgba(133, 97, 197, 0.45);
   --shadow-soft: 0 10px 40px -10px rgba(0, 96, 186, 0.25);
@@ -123,7 +125,7 @@
   }
 
   ::selection {
-    background: #8561C5;
+    background: #8561c5;
     color: white;
   }
 }
@@ -153,10 +155,10 @@
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px) saturate(150%);
+    -webkit-backdrop-filter: blur(24px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .grid-bg {
@@ -197,31 +199,58 @@
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
 @keyframes shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
