@@ -58,7 +58,7 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 max-w-xl text-lg md:text-xl text-muted-foreground"
         >
-          Learn. Lead. Innovate. A 8-week regional program for the next
+          Learn. Lead. Innovate. A 12-week regional program for the next
           generation of Asia leaders.
         </motion.p>
 

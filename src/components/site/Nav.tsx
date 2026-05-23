@@ -44,7 +44,7 @@ export function Nav() {
             ))}
           </nav>
           <a
-            href="#apply"
+            href="https://form.typeform.com/to/NOTrA2Qg"
             className="bg-gradient-brand animate-gradient text-white text-sm font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
           >
             Apply →
