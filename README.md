@@ -38,15 +38,17 @@ Built with **Next.js 16** (App Router), **React 19**, **TypeScript**, and **Tail
 ## Project Structure
 
 ```
-├── app/
+├── src/
+│   ├── app/
+│   │   ├── globals.css    # Global styles + design tokens
+│   │   ├── layout.tsx     # Root layout + metadata
+│   │   └── page.tsx       # Landing page
 │   ├── components/
 │   │   ├── site/          # Page sections (Hero, Nav, About, etc.)
 │   │   └── ui/            # shadcn/ui primitives (button, dialog, etc.)
 │   ├── hooks/             # Shared React hooks
 │   ├── lib/               # Utilities (cn, etc.)
-│   ├── globals.css        # Global styles + design tokens
-│   ├── layout.tsx         # Root layout + metadata
-│   └── page.tsx           # Landing page
+│   └── scripts/           # Local build scripts
 ├── public/
 │   ├── logo.png
 │   └── scraped/           # Speaker, fellow, and section images
