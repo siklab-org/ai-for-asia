@@ -7,6 +7,7 @@ import { About } from "@/components/site/About";
 import { Program } from "@/components/site/Program";
 import { UpcomingSpeakers } from "@/components/site/UpcomingSpeakers";
 import { Speakers } from "@/components/site/Speakers";
+import { Founders } from "@/components/site/Founders";
 import { Impact } from "@/components/site/Impact";
 import { Fellows } from "@/components/site/Fellows";
 import { Future } from "@/components/site/Future";
@@ -27,6 +28,7 @@ export default function Home() {
         <Program />
         <UpcomingSpeakers />
         <Speakers />
+        <Founders />
         <Impact />
         <Fellows />
         <Future />
