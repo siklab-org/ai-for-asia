@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Reveal } from "./Reveal";
 
 const areas = [
@@ -13,15 +13,40 @@ const areas = [
   { img: "/icons/Community.svg", title: "Community", desc: "Cross-border ASEAN networks." },
 ];
 
-const RADIUS = 320;
 const STEP = 360 / areas.length;
 
 export function Program() {
-  const [current, setCurrent] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const touchStartX = useRef(0);
 
-  const next = useCallback(() => setCurrent((c) => (c + 1) % areas.length), []);
-  const goTo = useCallback((i: number) => setCurrent(i), []);
+  const RADIUS = isMobile ? 80 : 320;
+  const iconSize = isMobile ? 65 : 130;
+  const trackW = isMobile ? 150 : 320;
+  const trackH = isMobile ? 300 : 460;
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const next = useCallback(() => setCounter((c) => c + 1), []);
+
+  const prev = useCallback(() => setCounter((c) => c - 1), []);
+
+  const goTo = useCallback((target: number) => {
+    setCounter((c) => {
+      const cur = c % areas.length;
+      let diff = target - cur;
+      if (diff > areas.length / 2) diff -= areas.length;
+      else if (diff < -areas.length / 2) diff += areas.length;
+      return c + diff;
+    });
+  }, []);
 
   useEffect(() => {
     if (paused) return;
@@ -29,16 +54,41 @@ export function Program() {
     return () => clearInterval(id);
   }, [paused, next]);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      const dx = e.changedTouches[0].clientX - touchStartX.current;
+      if (Math.abs(dx) > 40) {
+        if (dx < 0) next();
+        else prev();
+      }
+    },
+    [next, prev],
+  );
+
   return (
-    <section id="program" className="relative py-32 px-6 overflow-hidden">
+    <section id="program" className="relative py-20 md:py-32 px-4 md:px-6">
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+          0%, 100% { opacity: 0.3; transform: scaleX(1); }
+          50% { opacity: 0.9; transform: scaleX(1.4); }
+        }
+      `}</style>
       <div className="mx-auto max-w-6xl">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-20">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-12 md:mb-20">
           <div>
             <Reveal>
               <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">/ Program</span>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]">
+              <h2 className="mt-4 text-3xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]">
                 Six areas of <span className="text-gradient">work</span>.
               </h2>
             </Reveal>
@@ -46,40 +96,88 @@ export function Program() {
         </div>
 
         <div
-          className="flex items-center justify-center h-[520px]"
-          style={{ perspective: "1200px" }}
+          className="flex items-center justify-center h-[420px] md:h-[560px] select-none max-w-full"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
-          <div className="relative w-[320px] h-[420px]" style={{ transformStyle: "preserve-3d" }}>
-            {areas.map((a, i) => {
-              const diff = i - current;
-              const angle = diff * STEP;
-              const absAngle = Math.abs((((angle % 360) + 540) % 360) - 180);
+          <div
+            className="absolute w-[260px] h-[260px] md:w-[600px] md:h-[600px] rounded-full pointer-events-none"
+            style={{
+              background: "radial-gradient(circle at center, rgba(133, 97, 197, 0.15) 0%, rgba(198, 113, 175, 0.08) 40%, transparent 65%)",
+            }}
+          />
 
-              const opacity = absAngle > 110 ? 0 : 1 - absAngle / 110;
-              const scale = absAngle > 110 ? 0.5 : 1 - (absAngle / 180) * 0.5;
-              const zIndex = absAngle > 110 ? 0 : Math.round((1 - absAngle / 180) * 10);
+          <div
+            className="relative"
+            style={{ width: trackW, height: trackH }}
+          >
+            {areas.map((a, i) => {
+              const angle = (i - counter) * STEP;
+              const norm = Math.abs((((angle % 360) + 540) % 360) - 180);
+
+              let opacity: number;
+              let scaleFactor: number;
+              let clickable = false;
+
+              if (norm <= 30) {
+                opacity = 1;
+                scaleFactor = 1;
+                clickable = true;
+              } else if (norm <= 90) {
+                opacity = 0.7 - ((norm - 30) / 60) * 0.35;
+                scaleFactor = 0.9 - ((norm - 30) / 60) * 0.2;
+                clickable = true;
+              } else if (norm <= 150) {
+                opacity = 0.35 - ((norm - 90) / 60) * 0.3;
+                scaleFactor = 0.7 - ((norm - 90) / 60) * 0.2;
+                clickable = false;
+              } else {
+                opacity = 0;
+                scaleFactor = 0.5;
+                clickable = false;
+              }
+
+              const zIndex = norm > 150 ? 0 : Math.round((1 - norm / 180) * 10);
 
               return (
                 <button
                   key={a.title}
                   onClick={() => goTo(i)}
-                  className="absolute inset-0 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-2xl flex flex-col items-center justify-center p-8 transition-all duration-700 ease-out cursor-pointer disabled:cursor-default focus:outline-none"
+                  className={`absolute inset-0 flex flex-col items-center justify-center focus:outline-none ${clickable ? "cursor-pointer" : "cursor-default"}`}
                   style={{
-                    transform: `rotateY(${angle}deg) translateZ(${RADIUS}px)`,
+                    transform: `perspective(1000px) rotateY(${angle}deg) translateZ(${RADIUS}px) rotateY(${-angle}deg) scale(${scaleFactor})`,
                     opacity,
-                    scale,
                     zIndex,
-                    pointerEvents: absAngle > 100 ? "none" : "auto",
+                    pointerEvents: clickable ? "auto" : "none",
                     backfaceVisibility: "hidden",
+                    transition: "transform 0.9s ease-in-out, opacity 0.9s ease-in-out",
                   }}
                 >
-                  <Image src={a.img} alt={a.title} width={120} height={120} className="shrink-0" />
-                  <div className="mt-5 text-center">
-                    <div className="text-xs text-muted-foreground mb-1">0{i + 1}</div>
-                    <h3 className="text-xl font-semibold">{a.title}</h3>
+                  <div
+                    className="flex flex-col items-center justify-center"
+                    style={{
+                      animation: `float 4s ease-in-out infinite`,
+                      animationDelay: `${i * 0.4}s`,
+                    }}
+                  >
+                    <Image src={a.img} alt={a.title} width={iconSize} height={iconSize} className="shrink-0" />
+                    <div className="mt-3 md:mt-5 text-center">
+                      <div className="text-[10px] md:text-xs text-muted-foreground mb-0.5 md:mb-1">0{i + 1}</div>
+                      <h3 className="text-sm md:text-xl font-semibold leading-tight">{a.title}</h3>
+                    </div>
                   </div>
+
+                  <div
+                    className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-24 h-5 md:-bottom-6 md:w-36 md:h-7 rounded-full pointer-events-none"
+                    style={{
+                      background: "radial-gradient(ellipse at center, rgba(198, 113, 175, 0.5) 0%, transparent 70%)",
+                      filter: "blur(3px)",
+                      animation: `glow 4s ease-in-out infinite`,
+                      animationDelay: `${i * 0.4}s`,
+                    }}
+                  />
                 </button>
               );
             })}

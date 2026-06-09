@@ -247,7 +247,6 @@ export function UpcomingSpeakers() {
   return (
     <>
       <section id="upcoming" className="relative py-32 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial opacity-30" />
         <div className="relative mx-auto max-w-7xl">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
             <div>

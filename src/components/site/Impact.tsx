@@ -11,7 +11,6 @@ const stats = [
 export function Impact() {
   return (
     <section id="impact" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial opacity-40" />
       <div className="relative mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
