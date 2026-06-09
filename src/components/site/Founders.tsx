@@ -254,8 +254,6 @@ export function Founders() {
   return (
     <>
       <section id="founders" className="relative py-32 px-6 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
 
         <div className="relative mx-auto max-w-5xl">
           {/* Header */}

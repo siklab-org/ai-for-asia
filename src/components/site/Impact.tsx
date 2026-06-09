@@ -11,7 +11,6 @@ const stats = [
 export function Impact() {
   return (
     <section id="impact" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial opacity-40" />
       <div className="relative mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -47,7 +46,7 @@ export function Impact() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-brand blur-3xl opacity-30 rounded-full" />
-              <Image src="/scraped/impact-map.png" alt="ASEAN reach" width={600} height={400} className="relative w-full" />
+              <Image src="/map.png" alt="ASEAN reach" width={600} height={400} className="relative w-full" />
             </motion.div>
           </Reveal>
         </div>
