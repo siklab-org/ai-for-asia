@@ -47,7 +47,7 @@ export function Impact() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-brand blur-3xl opacity-30 rounded-full" />
-              <Image src="/scraped/impact-map.png" alt="ASEAN reach" width={600} height={400} className="relative w-full" />
+              <Image src="/map.png" alt="ASEAN reach" width={600} height={400} className="relative w-full" />
             </motion.div>
           </Reveal>
         </div>

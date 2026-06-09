@@ -26,10 +26,10 @@ export default function Home() {
         <Hero />
         <About />
         <Program />
+        <Impact />
         <UpcomingSpeakers />
         <Speakers />
         <Founders />
-        <Impact />
         <Fellows />
         <Future />
         <CTA />
