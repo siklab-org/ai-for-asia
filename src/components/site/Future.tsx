@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { img: "/scraped/future1.png", title: "Expand", desc: "Across all 10 ASEAN nations." },
-  { img: "/scraped/future2.png", title: "Deepen", desc: "Industry & academic partnerships." },
-  { img: "/scraped/future3.png", title: "Sustain", desc: "Year-round alumni innovation." },
+  { img: "/icons/Expand.svg", title: "Expand", desc: "Across all 10 ASEAN nations." },
+  { img: "/icons/Deepen.svg", title: "Deepen", desc: "Industry & academic partnerships." },
+  { img: "/icons/Sustain.svg", title: "Sustain", desc: "Year-round alumni innovation." },
 ];
 
 export function Future() {
@@ -24,12 +24,15 @@ export function Future() {
           {items.map((it, i) => (
             <Reveal key={it.title} delay={i * 0.1}>
               <div className="group relative rounded-3xl overflow-hidden aspect-[4/5] glass">
-                <Image
-                  src={it.img}
-                  alt={it.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                />
+                <div className="absolute inset-0 flex items-center justify-center p-10">
+                  <Image
+                    src={it.img}
+                    alt={it.title}
+                    width={280}
+                    height={280}
+                    className="object-contain group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="text-xs text-muted-foreground">0{i + 1}</div>

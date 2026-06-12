@@ -11,7 +11,7 @@
 
 ## Overview
 
-AI for ASIA is a 10-week fellowship program connecting the next generation of leaders across Southeast Asia. The website serves as the program's public face — showcasing the mission, past speakers, outstanding fellows, program areas, and impact across 8 ASEAN countries.
+AI for ASIA is a 12-week fellowship program connecting the next generation of leaders across Southeast Asia. The website serves as the program's public face — showcasing the mission, past speakers, outstanding fellows, program areas, and impact across 8 ASEAN countries.
 
 Built with **Next.js 16** (App Router), **React 19**, **TypeScript**, and **Tailwind CSS v4**, featuring a dark-themed design system with animated gradients, glass-morphism effects, and scroll-triggered reveals.
 
