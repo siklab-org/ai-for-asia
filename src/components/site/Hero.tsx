@@ -69,7 +69,9 @@ export function Hero() {
           className="mt-10 flex flex-wrap gap-3"
         >
           <a
-            href="#apply"
+            href="https://form.typeform.com/to/NOTrA2Qg"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-brand animate-gradient text-white font-medium px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
           >
             Become a Fellow

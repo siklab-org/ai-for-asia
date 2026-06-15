@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const stats = [
-  { n: "11+1", l: "ASEAN Countries + South Korea", s: "Represented" },
+  { n: "12", l: "ASEAN Countries + South Korea", s: "Represented" },
   { n: "120", l: "Fellows", s: "Across Asia" },
   { n: "10+", l: "High-Level", s: "Sessions" },
 ];

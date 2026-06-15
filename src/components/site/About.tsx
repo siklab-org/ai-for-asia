@@ -16,7 +16,7 @@ export function About() {
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           {[
             { k: "12", l: "Weeks" },
-            { k: "11+1", l: "ASEAN Nations + South Korea" },
+            { k: "12", l: "ASEAN Nations + South Korea" },
             { k: "120", l: "Fellows in Asia" },
           ].map((i, idx) => (
             <Reveal key={i.k} delay={0.1 * idx}>

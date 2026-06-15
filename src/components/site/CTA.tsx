@@ -17,7 +17,9 @@ export function CTA() {
               </p>
               <div className="mt-10 flex flex-wrap gap-3 justify-center">
                 <a
-                  href="mailto:hello@aiforasean.org"
+                  href="https://form.typeform.com/to/NOTrA2Qg"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white text-[#0060BA] font-semibold px-8 py-4 rounded-full hover:scale-105 transition-transform"
                 >
                   Apply now
