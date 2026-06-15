@@ -13,7 +13,6 @@ import { Fellows } from "@/components/site/Fellows";
 import { Future } from "@/components/site/Future";
 import { CTA } from "@/components/site/CTA";
 import { Contact } from "@/components/site/Contact";
-import { Partners } from "@/components/site/Partners";
 import { Footer } from "@/components/site/Footer";
 
 const queryClient = new QueryClient();
@@ -34,7 +33,6 @@ export default function Home() {
         <Future />
         <CTA />
         <Contact />
-        <Partners />
         <Footer />
       </main>
     </QueryClientProvider>

@@ -151,7 +151,7 @@ function SpeakerCard({
       <motion.div
         whileHover={{ y: -6 }}
         onClick={() => onSelect(speaker)}
-        className="relative h-[450px] rounded-2xl overflow-hidden glass cursor-pointer group"
+        className="relative h-[320px] sm:h-[450px] rounded-2xl overflow-hidden glass cursor-pointer group"
       >
         {/* Portrait */}
         <div className="absolute inset-0">
@@ -364,7 +364,7 @@ export function Speakers() {
             </Reveal>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {speakers.map((s, i) => (
               <SpeakerCard
                 key={s.name}

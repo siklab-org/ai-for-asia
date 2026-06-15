@@ -15,9 +15,9 @@ export function About() {
 
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           {[
-            { k: "10", l: "Weeks intensive" },
-            { k: "8", l: "ASEAN nations" },
-            { k: "57", l: "Fellows in Asia" },
+            { k: "12", l: "Weeks" },
+            { k: "11+1", l: "ASEAN Nations + South Korea" },
+            { k: "120", l: "Fellows in Asia" },
           ].map((i, idx) => (
             <Reveal key={i.k} delay={0.1 * idx}>
               <div className="glass rounded-3xl p-8 hover:bg-white/[0.07] transition-all hover:-translate-y-1 duration-500">
@@ -30,9 +30,11 @@ export function About() {
 
         <Reveal delay={0.2}>
           <p className="mt-16 max-w-3xl text-xl text-muted-foreground leading-relaxed">
-            Fellows engage with world-class speakers, industry leaders, and policy experts —
-            joining knowledge-sharing sessions, mentorship, and capstone projects that apply
-            AI to real-world problems.
+            Southeast Asia isn&apos;t waiting for AI to arrive — it&apos;s already here. AI
+            for Asia trains the next wave of ASEAN leaders to shape how it&apos;s built,
+            governed, and deployed across the region. Fellows learn from industry leaders,
+            UN officials, and policy makers through live sessions, mentorship, and a
+            capstone project they actually ship.
           </p>
         </Reveal>
       </div>

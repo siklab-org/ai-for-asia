@@ -43,13 +43,13 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9]"
         >
-          Unlock
+          Shape
           <br />
           <span className="text-gradient animate-gradient">
-            Asia&apos;s Future
+            what comes
           </span>
           <br />
-          <span className="text-muted-foreground/60">with AI.</span>
+          <span className="text-muted-foreground/60">next.</span>
         </motion.h1>
 
         <motion.p
@@ -58,8 +58,8 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 max-w-xl text-lg md:text-xl text-muted-foreground"
         >
-          Learn. Lead. Innovate. A 12-week regional program for the next
-          generation of Asia leaders.
+          A 12-week fully online fellowship for emerging leaders across ASEAN,
+          where AI meets policy, community, and real-world impact.
         </motion.p>
 
         <motion.div
@@ -80,6 +80,30 @@ export function Hero() {
           >
             Learn more
           </a>
+        </motion.div>
+
+        {/* Partner logos */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="mt-16"
+        >
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
+            Supported by
+          </p>
+          <div className="flex items-center gap-6">
+            <img
+              src="/partners/adb.svg"
+              alt="Asian Development Bank (ADB)"
+              className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <img
+              src="/partners/nyc.jpg"
+              alt="National Youth Council Singapore"
+              className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+          </div>
         </motion.div>
 
         {/* Floating logo */}

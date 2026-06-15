@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const items = [
-  { img: "/icons/Expand.svg", title: "Expand", desc: "Across all 10 ASEAN nations." },
+  { img: "/icons/Expand.svg", title: "Expand", desc: "Reaching all 11 ASEAN nations, ensuring no country is left out of Asia's AI moment." },
   { img: "/icons/Deepen.svg", title: "Deepen", desc: "Industry & academic partnerships." },
   { img: "/icons/Sustain.svg", title: "Sustain", desc: "Year-round alumni innovation." },
 ];

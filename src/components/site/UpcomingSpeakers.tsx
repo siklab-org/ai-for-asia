@@ -262,8 +262,10 @@ export function UpcomingSpeakers() {
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="mt-6 text-muted-foreground max-w-xl">
-                  The next cohort welcomes a new lineup of leaders, founders, and policy
-                  experts shaping AI across the region. Announcements rolling out shortly.
+                  The 2026 cohort brings in a new class of speakers; founders
+                  building AI tools in Southeast Asia, policymakers at the table
+                  where decisions get made, and researchers asking the questions
+                  that matter. Lineup dropping soon.
                 </p>
               </Reveal>
             </div>

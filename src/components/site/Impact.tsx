@@ -3,9 +3,9 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const stats = [
-  { n: "8", l: "ASEAN Countries", s: "Represented" },
-  { n: "57", l: "Fellows", s: "Across Asia" },
-  { n: "6", l: "High-Level", s: "Sessions" },
+  { n: "11+1", l: "ASEAN Countries + South Korea", s: "Represented" },
+  { n: "120", l: "Fellows", s: "Across Asia" },
+  { n: "10+", l: "High-Level", s: "Sessions" },
 ];
 
 export function Impact() {
