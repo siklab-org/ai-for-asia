@@ -82,6 +82,31 @@ export function Hero() {
           >
             Learn more
           </a>
+          <a
+            href="https://drive.google.com/drive/folders/1Kl_hC26m6liwJu4yaK9B_j0A_6DdoN3R"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
+          >
+            Program Briefer →
+          </a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="mt-16 flex items-center gap-3"
+        >
+          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Supported by
+          </span>
+          <span className="h-px w-8 bg-white/10" />
+          <img
+            src="/partners/nyc-white.png"
+            alt="National Youth Council Singapore"
+            className="h-9 w-auto opacity-70"
+          />
         </motion.div>
 
         {/* Floating logo */}
