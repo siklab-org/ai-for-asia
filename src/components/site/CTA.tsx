@@ -25,7 +25,7 @@ export function CTA() {
                   Apply now
                 </a>
                 <a
-                  href="mailto:partners@aiforasean.org"
+                  href="#apply"
                   className="border border-white/30 text-white font-medium px-8 py-4 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Become a partner

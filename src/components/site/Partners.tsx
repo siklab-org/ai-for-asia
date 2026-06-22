@@ -15,16 +15,6 @@ export function Partners() {
                 alt="Department of Education (DepEd)"
                 className="h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
               />
-              <img
-                src="/partners/adb.svg"
-                alt="Asian Development Bank (ADB)"
-                className="h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="/partners/nyc.jpg"
-                alt="National Youth Council Singapore"
-                className="h-12 w-auto opacity-90 hover:opacity-100 transition-opacity"
-              />
             </div>
           </div>
         </Reveal>

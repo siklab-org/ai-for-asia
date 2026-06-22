@@ -84,30 +84,6 @@ export function Hero() {
           </a>
         </motion.div>
 
-        {/* Partner logos */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="mt-16"
-        >
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
-            Supported by
-          </p>
-          <div className="flex items-center gap-6">
-            <img
-              src="/partners/adb.svg"
-              alt="Asian Development Bank (ADB)"
-              className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-            <img
-              src="/partners/nyc.jpg"
-              alt="National Youth Council Singapore"
-              className="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-          </div>
-        </motion.div>
-
         {/* Floating logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

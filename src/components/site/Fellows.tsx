@@ -2,11 +2,16 @@ import Image from "next/image";
 import { Reveal } from "./Reveal";
 
 const fellows = [
-  { img: "/scraped/fellow1.png", name: "Carrisa Tehputri", quote: "ASEAN must decide: act independently — or rise as one." },
-  { img: "/scraped/fellow2.png", name: "Jupiter D. Cabig Jr.", quote: "Government can shape vibrant AI startup ecosystems." },
-  { img: "/scraped/fellow3.png", name: "Dylan Joseph Gonzales", quote: "AI is multisectoral — and must be ethical for community." },
-  { img: "/scraped/fellow4.png", name: "Nguyen Thi Huyen Trang", quote: "Governance and workforce adaptation must move in parallel." },
-  { img: "/scraped/fellow5.png", name: "Shine Min Kha", quote: "Leadership is the key skill of the AI-driven era." },
+  { img: "/fellows/Carrisa Tehputri.jpeg", name: "Carrisa Tehputri", quote: "ASEAN must decide: act independently — or rise as one." },
+  { img: "/fellows/Jupiter Cabig Jr.jpg", name: "Jupiter D. Cabig Jr.", quote: "Government can shape vibrant AI startup ecosystems." },
+  { img: "/fellows/Dylan Joseph Gonzales.jpg", name: "Dylan Joseph Gonzales", quote: "AI is multisectoral — and must be ethical for community." },
+  { img: "/fellows/41 Trang Nguyen.jpg", name: "Nguyen Thi Huyen Trang", quote: "Governance and workforce adaptation must move in parallel." },
+  { img: "/fellows/Shine_Min_Kha_photo.jpg", name: "Shine Min Kha", quote: "Leadership is the key skill of the AI-driven era." },
+  { img: "/fellows/Ahmad Habibulloh.jpg", name: "Ahmad Habibulloh", quote: "AI governance must serve communities across ASEAN." },
+  { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them." },
+  { img: "/fellows/Lee Zhao Yi Charles.jpeg", name: "Lee Zhao Yi Charles", quote: "Building AI that reflects our shared humanity." },
+  { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together." },
+  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices." },
 ];
 
 export function Fellows() {
@@ -32,6 +37,7 @@ export function Fellows() {
                     alt={f.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    style={f.name === "Carrisa Tehputri" || f.name === "Hanazel Superal" ? { objectPosition: "center 30%" } : undefined}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 </div>
