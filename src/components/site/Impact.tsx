@@ -1,6 +1,15 @@
+import dynamic from "next/dynamic";
 import { motion } from "motion/react";
-import Image from "next/image";
 import { Reveal } from "./Reveal";
+
+const InteractiveMap = dynamic(() => import("./InteractiveMap").then((m) => m.InteractiveMap), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-[400px] rounded-2xl bg-muted/30 flex items-center justify-center text-sm text-muted-foreground">
+      Loading map…
+    </div>
+  ),
+});
 
 const stats = [
   { n: "12", l: "ASEAN Countries + South Korea", s: "Represented" },
@@ -26,7 +35,7 @@ export function Impact() {
 
             <div className="mt-12 space-y-4">
               {stats.map((s, i) => (
-                <Reveal key={s.n} delay={i * 0.1}>
+                <Reveal key={s.n + '-' + i} delay={i * 0.1}>
                   <div className="flex items-baseline gap-6 border-b border-border pb-4">
                     <div className="text-5xl md:text-6xl font-bold text-gradient w-24">{s.n}</div>
                     <div>
@@ -46,7 +55,7 @@ export function Impact() {
               className="relative"
             >
               <div className="absolute inset-0 bg-gradient-brand blur-3xl opacity-30 rounded-full" />
-              <Image src="/map.png" alt="ASEAN reach" width={600} height={400} className="relative w-full" />
+              <InteractiveMap />
             </motion.div>
           </Reveal>
         </div>
