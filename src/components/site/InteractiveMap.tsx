@@ -8,9 +8,9 @@ import { fellows } from "./Fellows";
 const countryCoords: Record<string, { lat: number; lng: number }[]> = {
   Indonesia: [{ lat: -5, lng: 118 }],
   Philippines: [
-    { lat: 13.5, lng: 122.5 },
-    { lat: 11, lng: 124 },
-    { lat: 10, lng: 122 },
+    { lat: 7.07, lng: 125.61 },
+    { lat: 16.41, lng: 120.6 },
+    { lat: 14.55, lng: 121.04 },
   ],
   Vietnam: [{ lat: 15, lng: 108 }],
   Myanmar: [{ lat: 21, lng: 96 }],
@@ -23,18 +23,13 @@ const countryCoords: Record<string, { lat: number; lng: number }[]> = {
 };
 
 let idx: Record<string, number> = {};
-let coordCache: Record<string, { lat: number; lng: number }> = {};
 
 const getCoord = (country: string) => {
-  const key = country;
-  if (coordCache[key]) return coordCache[key];
   idx[country] ??= -1;
   idx[country]++;
   const arr = countryCoords[country];
   if (!arr) return { lat: 10, lng: 110 };
-  const c = arr[idx[country] % arr.length];
-  coordCache[key] = c;
-  return c;
+  return arr[idx[country] % arr.length];
 };
 
 function createMarkerIcon() {
@@ -55,11 +50,10 @@ export function InteractiveMap() {
     if (mapRef.current || !ref.current) return;
 
     idx = {};
-    coordCache = {};
 
     const map = L.map(ref.current, {
       center: [10, 112],
-      zoom: 5,
+      zoom: 4,
       scrollWheelZoom: false,
       zoomControl: false,
       attributionControl: false,

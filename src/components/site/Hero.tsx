@@ -105,7 +105,7 @@ export function Hero() {
           <img
             src="/partners/nyc-white.png"
             alt="National Youth Council Singapore"
-            className="h-9 w-auto opacity-70"
+            className="h-14 w-auto opacity-80"
           />
         </motion.div>
 
