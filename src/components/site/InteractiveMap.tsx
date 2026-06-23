@@ -55,13 +55,12 @@ export function InteractiveMap() {
       center: [10, 112],
       zoom: 4,
       scrollWheelZoom: false,
+      boxZoom: false,
+      doubleClickZoom: false,
+      keyboard: false,
       zoomControl: false,
       attributionControl: false,
-      maxBounds: [
-        [-10, 90],
-        [28, 145],
-      ],
-      maxBoundsViscosity: 1,
+
     });
 
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
@@ -156,22 +155,15 @@ export function InteractiveMap() {
       }).addTo(map);
 
       const html = `
-        <div style="padding:0">
-          <div style="position:relative;height:110px;overflow:hidden">
-            <img src="${f.img}" alt="${f.name}" style="width:100%;height:100%;object-fit:cover" />
-            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(15,15,25,0.7), transparent)"></div>
-          </div>
-          <div style="padding:12px 14px 14px">
-            <div style="font-weight:600;font-size:14px;line-height:1.2;color:#f0f0f0">${f.name}</div>
-            <div style="font-size:11px;color:rgba(198,113,175,0.8);margin-top:2px">${f.country}</div>
-            <p style="font-size:11px;color:rgba(255,255,255,0.55);margin:6px 0 0;font-style:italic;line-height:1.4;border-top:1px solid rgba(255,255,255,0.06);padding-top:6px">&ldquo;${f.quote}&rdquo;</p>
+        <div style="padding:0;line-height:0">
+          <img src="${f.img}" alt="${f.name}" style="width:100%;height:auto;display:block" />
+          <div style="padding:10px 14px 12px;text-align:center;line-height:1.3">
+            <div style="font-weight:700;font-size:14px;color:#f0f0f0">${f.name}</div>
           </div>
         </div>
       `;
 
-      marker.bindPopup(html, { maxWidth: 200, className: "", closeButton: false });
-      marker.on("mouseover", () => marker.openPopup());
-      marker.on("mouseout", () => marker.closePopup());
+      marker.bindPopup(html, { maxWidth: 200, className: "", closeButton: true, autoPan: false });
     });
 
     mapRef.current = map;
@@ -185,7 +177,7 @@ export function InteractiveMap() {
   return (
     <div
       ref={ref}
-      className="w-full h-[400px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl"
+      className="w-full h-[520px] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl"
     />
   );
 }

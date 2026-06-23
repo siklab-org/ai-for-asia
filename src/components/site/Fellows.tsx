@@ -46,7 +46,7 @@ export function Fellows() {
                     alt={f.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    style={f.name === "Carrisa Tehputri" || f.name === "Hanazel Superal" || f.name === "Ahmad Habibulloh" ? { objectPosition: "center 30%" } : undefined}
+                    style={{ objectPosition: "center 25%" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 </div>

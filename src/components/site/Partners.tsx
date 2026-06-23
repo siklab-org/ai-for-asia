@@ -13,7 +13,7 @@ export function Partners() {
               <img
                 src="/partners/nyc-white.png"
                 alt="National Youth Council Singapore"
-                className="h-28 w-auto opacity-90 hover:opacity-100 transition-opacity"
+                 className="h-48 w-auto opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
