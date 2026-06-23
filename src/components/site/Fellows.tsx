@@ -14,6 +14,8 @@ export interface Fellow {
   country: string;
   x: number;
   y: number;
+  imageScale?: number;
+  imagePosition?: string;
 }
 
 export const fellows: Fellow[] = [
@@ -26,7 +28,7 @@ export const fellows: Fellow[] = [
   { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them.", city: "Manila", country: "Philippines", x: 60, y: 42 },
   { img: "/fellows/Lee Zhao Yi Charles.jpeg", name: "Lee Zhao Yi Charles", quote: "Building AI that reflects our shared humanity.", city: "Singapore", country: "Singapore", x: 24, y: 57 },
   { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together.", city: "Singapore", country: "Singapore", x: 27, y: 60 },
-  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", city: "Bangkok", country: "Thailand", x: 15, y: 20 },
+  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", city: "Bangkok", country: "Thailand", x: 15, y: 20, imageScale: 1.5, imagePosition: "center 30%" },
 ];
 
 export function flagPinSvg(country: string): string {

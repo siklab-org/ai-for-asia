@@ -2,7 +2,8 @@ import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="relative py-32 px-6">
+    <section id="about" className="relative py-32 px-6 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/90 to-transparent pointer-events-none" />
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">/ About</span>
