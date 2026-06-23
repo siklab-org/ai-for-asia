@@ -83,7 +83,7 @@ export function Hero() {
             Learn more
           </a>
           <a
-            href="https://drive.google.com/drive/folders/1Kl_hC26m6liwJu4yaK9B_j0A_6DdoN3R"
+            href="https://drive.google.com/file/d/1L6iBEtBjJxUqfj04alYvuqMRUrEXCI8Y/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"

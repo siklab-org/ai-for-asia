@@ -44,7 +44,7 @@ function FellowRow({ fellow, index }: { fellow: Fellow; index: number }) {
           alt={fellow.name}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-all duration-[900ms] ease-out group-hover:scale-105"
+          className="object-cover transition-all duration-[900ms] ease-out group-hover:scale-105 grayscale group-hover:grayscale-0"
           style={{ objectPosition: "center 25%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-1/0 via-brand-3/0 to-brand-5/0 transition-all duration-700 group-hover:from-brand-1/15 group-hover:via-brand-3/10 group-hover:to-brand-5/10" />
@@ -88,7 +88,7 @@ export function Fellows() {
   return (
     <section id="fellows" className="relative py-32 md:py-40">
       {/* Header */}
-      <div className="px-6 pb-20 md:pb-28">
+      <div className="px-6 pb-12 md:pb-28">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
@@ -103,8 +103,38 @@ export function Fellows() {
         </div>
       </div>
 
-      {/* Spreads */}
-      <div className="space-y-20 md:space-y-28">
+      {/* Mobile grid — 2 columns */}
+      <div className="px-6 md:hidden">
+        <div className="grid grid-cols-2 gap-3">
+          {fellows.map((f, i) => (
+            <motion.div
+              key={f.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.6, delay: (i % 4) * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="group relative aspect-[3/4] rounded-2xl overflow-hidden bg-white/[0.03]"
+            >
+              <Image
+                src={f.img}
+                alt={f.name}
+                fill
+                sizes="50vw"
+                className="object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
+                style={{ objectPosition: "center 25%" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="text-xs font-semibold text-white leading-tight">{f.name}</p>
+                <p className="text-[10px] text-white/50 italic mt-0.5">{f.country}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop spreads */}
+      <div className="hidden md:block space-y-20 md:space-y-28">
         {fellows.map((f, i) => (
           <FellowRow key={f.name} fellow={f} index={i} />
         ))}
