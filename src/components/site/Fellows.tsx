@@ -10,23 +10,97 @@ export interface Fellow {
   img: string;
   name: string;
   quote: string;
+  city: string;
   country: string;
   x: number;
   y: number;
 }
 
 export const fellows: Fellow[] = [
-  { img: "/fellows/Carrisa Tehputri.jpeg", name: "Carrisa Tehputri", quote: "ASEAN must decide: act independently — or rise as one.", country: "Indonesia", x: 43, y: 67 },
-  { img: "/fellows/Jupiter Cabig Jr.jpg", name: "Jupiter D. Cabig Jr.", quote: "Government can shape vibrant AI startup ecosystems.", country: "Philippines", x: 56, y: 36 },
-  { img: "/fellows/Dylan Joseph Gonzales.jpg", name: "Dylan Joseph Gonzales", quote: "AI is multisectoral — and must be ethical for community.", country: "Philippines", x: 50, y: 40 },
-  { img: "/fellows/41 Trang Nguyen.jpg", name: "Nguyen Thi Huyen Trang", quote: "Governance and workforce adaptation must move in parallel.", country: "Vietnam", x: 25, y: 24 },
-  { img: "/fellows/Shine_Min_Kha_photo.jpg", name: "Shine Min Kha", quote: "Leadership is the key skill of the AI-driven era.", country: "Myanmar", x: 10, y: 14 },
-  { img: "/fellows/Ahmad Habibulloh.jpg", name: "Ahmad Habibulloh", quote: "AI governance must serve communities across ASEAN.", country: "Taiwan", x: 12, y: 10 },
-  { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them.", country: "Philippines", x: 60, y: 42 },
-  { img: "/fellows/Lee Zhao Yi Charles.jpeg", name: "Lee Zhao Yi Charles", quote: "Building AI that reflects our shared humanity.", country: "Singapore", x: 24, y: 57 },
-  { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together.", country: "Singapore", x: 27, y: 60 },
-  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", country: "Thailand", x: 15, y: 20 },
+  { img: "/fellows/Carrisa Tehputri.jpeg", name: "Carrisa Tehputri", quote: "ASEAN must decide: act independently — or rise as one.", city: "Jakarta", country: "Indonesia", x: 43, y: 67 },
+  { img: "/fellows/Jupiter Cabig Jr.jpg", name: "Jupiter D. Cabig Jr.", quote: "Government can shape vibrant AI startup ecosystems.", city: "Manila", country: "Philippines", x: 56, y: 36 },
+  { img: "/fellows/Dylan Joseph Gonzales.jpg", name: "Dylan Joseph Gonzales", quote: "AI is multisectoral — and must be ethical for community.", city: "Manila", country: "Philippines", x: 50, y: 40 },
+  { img: "/fellows/41 Trang Nguyen.jpg", name: "Nguyen Thi Huyen Trang", quote: "Governance and workforce adaptation must move in parallel.", city: "Hanoi", country: "Vietnam", x: 25, y: 24 },
+  { img: "/fellows/Shine_Min_Kha_photo.jpg", name: "Shine Min Kha", quote: "Leadership is the key skill of the AI-driven era.", city: "Yangon", country: "Myanmar", x: 10, y: 14 },
+  { img: "/fellows/Ahmad Habibulloh.jpg", name: "Ahmad Habibulloh", quote: "AI governance must serve communities across ASEAN.", city: "Taipei", country: "Taiwan", x: 12, y: 10 },
+  { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them.", city: "Manila", country: "Philippines", x: 60, y: 42 },
+  { img: "/fellows/Lee Zhao Yi Charles.jpeg", name: "Lee Zhao Yi Charles", quote: "Building AI that reflects our shared humanity.", city: "Singapore", country: "Singapore", x: 24, y: 57 },
+  { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together.", city: "Singapore", country: "Singapore", x: 27, y: 60 },
+  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", city: "Bangkok", country: "Thailand", x: 15, y: 20 },
 ];
+
+export function flagPinSvg(country: string): string {
+  const size = 28;
+  const flag = (paths: string) => `
+    <svg width="${size}" height="${size}" viewBox="0 0 28 28" style="flex-shrink:0;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3))">
+      <defs><clipPath id="pin-${country}"><circle cx="14" cy="12" r="11" /></clipPath></defs>
+      <g clip-path="url(#pin-${country})">${paths}</g>
+      <circle cx="14" cy="12" r="11" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+      <path d="M14 24 Q10 18 8 14 Q6 10 8 7 Q10 4 14 4 Q18 4 20 7 Q22 10 20 14 Q18 18 14 24Z" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" transform="translate(0,1)" />
+    </svg>`;
+
+  switch (country) {
+    case "Indonesia": return flag('<rect x="3" y="7" width="22" height="5" fill="#CE1126"/><rect x="3" y="12" width="22" height="5" fill="#fff"/>');
+    case "Philippines": return flag('<rect x="3" y="7" width="22" height="5" fill="#0038A8"/><rect x="3" y="12" width="22" height="5" fill="#CE1126"/><polygon points="3,7 14,12 3,17" fill="#fff"/>');
+    case "Vietnam": return flag('<rect x="3" y="7" width="22" height="10" fill="#DA251D"/><polygon points="14,8 15.5,11.5 19,11.5 16.5,14 17.5,17.5 14,15.5 10.5,17.5 11.5,14 9,11.5 12.5,11.5" fill="#FFFF00"/>');
+    case "Myanmar": return flag('<rect x="3" y="7" width="22" height="3.33" fill="#FECB00"/><rect x="3" y="10.33" width="22" height="3.33" fill="#34B233"/><rect x="3" y="13.66" width="22" height="3.34" fill="#EA2839"/>');
+    case "Taiwan": return flag('<rect x="3" y="7" width="22" height="10" fill="#FE0000"/><rect x="3" y="7" width="11" height="5" fill="#000095"/><circle cx="8.5" cy="9.5" r="2.5" fill="#fff"/><path d="M8.5 7.5 L9 9 L10.5 9 L9.5 10 L10 11.5 L8.5 10.5 L7 11.5 L7.5 10 L6.5 9 L8 9 Z" fill="#fff"/>');
+    case "Singapore": return flag('<rect x="3" y="7" width="22" height="5" fill="#ED2939"/><rect x="3" y="12" width="22" height="5" fill="#fff"/><circle cx="8" cy="9.5" r="2.5" fill="#fff"/><circle cx="8" cy="9.5" r="1.8" fill="#ED2939"/>');
+    case "Thailand": return flag('<rect x="3" y="7" width="22" height="2" fill="#00247D"/><rect x="3" y="9" width="22" height="2" fill="#fff"/><rect x="3" y="11" width="22" height="2" fill="#CE1126"/><rect x="3" y="13" width="22" height="2" fill="#fff"/><rect x="3" y="15" width="22" height="2" fill="#00247D"/>');
+    default: return "";
+  }
+}
+
+function FlagPin({ country }: { country: string }) {
+  const size = 28;
+  const cn = (paths: React.ReactNode) => (
+    <svg width={size} height={size} viewBox="0 0 28 28" className="shrink-0 drop-shadow-lg">
+      <defs>
+        <clipPath id={`pin-${country}`}>
+          <circle cx={14} cy={12} r={11} />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#pin-${country})`}>
+        {paths}
+      </g>
+      <circle cx={14} cy={12} r={11} fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth={1} />
+      <path d="M14 24 Q10 18 8 14 Q6 10 8 7 Q10 4 14 4 Q18 4 20 7 Q22 10 20 14 Q18 18 14 24Z" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth={1} transform="translate(0,1)" />
+    </svg>
+  );
+
+  switch (country) {
+    case "Indonesia":
+      return cn(
+        <><rect x={3} y={7} width={22} height={5} fill="#CE1126" /><rect x={3} y={12} width={22} height={5} fill="#fff" /></>
+      );
+    case "Philippines":
+      return cn(
+        <><rect x={3} y={7} width={22} height={5} fill="#0038A8" /><rect x={3} y={12} width={22} height={5} fill="#CE1126" /><polygon points="3,7 14,12 3,17" fill="#fff" /></>
+      );
+    case "Vietnam":
+      return cn(
+        <><rect x={3} y={7} width={22} height={10} fill="#DA251D" /><polygon points="14,8 15.5,11.5 19,11.5 16.5,14 17.5,17.5 14,15.5 10.5,17.5 11.5,14 9,11.5 12.5,11.5" fill="#FFFF00" /></>
+      );
+    case "Myanmar":
+      return cn(
+        <><rect x={3} y={7} width={22} height={3.33} fill="#FECB00" /><rect x={3} y={10.33} width={22} height={3.33} fill="#34B233" /><rect x={3} y={13.66} width={22} height={3.34} fill="#EA2839" /></>
+      );
+    case "Taiwan":
+      return cn(
+        <><rect x={3} y={7} width={22} height={10} fill="#FE0000" /><rect x={3} y={7} width={11} height={5} fill="#000095" /><circle cx={8.5} cy={9.5} r={2.5} fill="#fff" /><path d="M8.5 7.5 L9 9 L10.5 9 L9.5 10 L10 11.5 L8.5 10.5 L7 11.5 L7.5 10 L6.5 9 L8 9 Z" fill="#fff" /></>
+      );
+    case "Singapore":
+      return cn(
+        <><rect x={3} y={7} width={22} height={5} fill="#ED2939" /><rect x={3} y={12} width={22} height={5} fill="#fff" /><circle cx={8} cy={9.5} r={2.5} fill="#fff" /><circle cx={8} cy={9.5} r={1.8} fill="#ED2939" /></>
+      );
+    case "Thailand":
+      return cn(
+        <><rect x={3} y={7} width={22} height={2} fill="#00247D" /><rect x={3} y={9} width={22} height={2} fill="#fff" /><rect x={3} y={11} width={22} height={2} fill="#CE1126" /><rect x={3} y={13} width={22} height={2} fill="#fff" /><rect x={3} y={15} width={22} height={2} fill="#00247D" /></>
+      );
+    default:
+      return null;
+  }
+}
 
 function ArrowButton({ dir, onClick }: { dir: "left" | "right"; onClick: () => void }) {
   const Icon = dir === "left" ? ChevronLeft : ChevronRight;
@@ -78,7 +152,10 @@ function FellowCard({ fellow, index, isActive }: { fellow: Fellow; index: number
 
         <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
           <p className="text-sm md:text-base font-semibold text-white leading-tight">{fellow.name}</p>
-          <p className="text-xs text-white/50 italic mt-0.5">{fellow.country}</p>
+          <div className="flex items-center gap-1.5 mt-1">
+            <FlagPin country={fellow.country} />
+            <p className="text-[11px] md:text-xs text-white/60 font-light tracking-wide">{fellow.city}, {fellow.country}</p>
+          </div>
         </div>
 
         <motion.div
@@ -87,13 +164,9 @@ function FellowCard({ fellow, index, isActive }: { fellow: Fellow; index: number
           transition={{ duration: 0.3 }}
           className="absolute inset-0 flex items-center justify-center p-5 bg-black/60 backdrop-blur-[2px]"
         >
-          <div className="relative">
-            <span className="absolute -top-3 -left-2 text-cyan-400/30 text-2xl font-mono">&gt;</span>
-            <p className="text-xs md:text-sm text-white/90 italic leading-relaxed text-center font-light max-w-[90%]">
-              &ldquo;{fellow.quote}&rdquo;
-            </p>
-            <span className="absolute -bottom-3 -right-2 text-cyan-400/30 text-2xl font-mono">&lt;</span>
-          </div>
+          <p className="text-xs md:text-sm text-white/90 italic leading-relaxed text-center font-light max-w-[90%]">
+            &ldquo;{fellow.quote}&rdquo;
+          </p>
         </motion.div>
       </div>
     </div>

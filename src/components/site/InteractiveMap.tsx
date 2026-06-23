@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { fellows } from "./Fellows";
+import { fellows, flagPinSvg } from "./Fellows";
 
 const countryCoords: Record<string, { lat: number; lng: number }[]> = {
   Indonesia: [{ lat: -5, lng: 118 }],
@@ -158,7 +158,11 @@ export function InteractiveMap() {
         <div style="padding:0;line-height:0">
           <img src="${f.img}" alt="${f.name}" style="width:100%;height:auto;display:block" />
           <div style="padding:10px 14px 12px;text-align:center;line-height:1.3">
-            <div style="font-weight:700;font-size:14px;color:#f0f0f0">${f.name}</div>
+            <div style="font-weight:600;font-size:13px;color:#f0f0f0">${f.name}</div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px">
+              ${flagPinSvg(f.country)}
+              <span style="font-size:11px;color:rgba(255,255,255,0.55);font-weight:400">${f.city}, ${f.country}</span>
+            </div>
           </div>
         </div>
       `;
