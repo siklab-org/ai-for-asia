@@ -8,6 +8,7 @@ export function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Animated gradient backdrop */}
+      <div className="absolute inset-0 bg-background" />
       <div className="absolute inset-0 bg-gradient-radial animate-gradient" />
       <div className="absolute inset-0 grid-bg opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />

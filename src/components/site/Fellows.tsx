@@ -139,7 +139,7 @@ function FellowCard({ fellow, index, isActive }: { fellow: Fellow; index: number
       className={`group shrink-0 snap-center px-2 md:px-3 transition-all duration-500 ${
         isActive ? "scale-100 opacity-100" : "scale-95 opacity-40"
       }`}
-      style={{ width: "clamp(240px, 28vw, 320px)" }}
+      style={{ width: "clamp(240px, 28vw, 320px)", scrollSnapStop: "always" }}
     >
       <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] shadow-xl">
         <Image
@@ -212,12 +212,12 @@ export function Fellows() {
     if (!el) return;
     const total = fellows.length;
     const clamped = ((index % total) + total) % total;
-    el.querySelectorAll<HTMLElement>("[data-card]").forEach((card, i) => {
-      if (i === clamped) {
-        const target = card.offsetLeft - (el.clientWidth / 2 - card.offsetWidth / 2);
-        el.scrollTo({ left: target, behavior: "smooth" });
-      }
-    });
+    const cards = el.querySelectorAll<HTMLElement>("[data-card]");
+    const card = cards[clamped];
+    if (!card) return;
+    const target = card.offsetLeft - (el.clientWidth / 2 - card.offsetWidth / 2);
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    el.scrollTo({ left: Math.max(0, Math.min(maxScroll, target)), behavior: "smooth" });
   }, []);
 
   const handleScroll = useCallback(() => {
@@ -285,49 +285,51 @@ export function Fellows() {
             </h2>
           </Reveal>
         </div>
-
-        <div className="relative">
-          <div className="hidden md:block">
-            <ArrowButton dir="left" onClick={() => scrollTo(activeIndex - 1)} />
-            <ArrowButton dir="right" onClick={() => scrollTo(activeIndex + 1)} />
-          </div>
-
-          <div
-            ref={scrollRef}
-            onScroll={handleScroll}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={(e) => { handleMouseUp(e); autoPlayRef.current = true; }}
-            onMouseEnter={() => { autoPlayRef.current = false; }}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-6 px-6 cursor-grab select-none"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            <div className="shrink-0" style={{ width: spacerWidth }} />
-            {fellows.map((f, i) => (
-              <FellowCard key={f.name} fellow={f} index={i} isActive={i === activeIndex} />
-            ))}
-            <div className="shrink-0" style={{ width: spacerWidth }} />
-          </div>
-
-          <div className="pointer-events-none absolute inset-y-0 -left-6 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 -right-6 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent" />
-        </div>
       </div>
 
-      <div className="flex justify-center items-center gap-2 mt-6 md:mt-8">
-        {fellows.map((f, i) => (
-          <button
-            key={f.name}
-            onClick={() => scrollTo(i)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${
-              i === activeIndex
-                ? "w-8 bg-gradient-to-r from-cyan-400 to-blue-500"
-                : "w-1.5 bg-white/20 hover:bg-white/40"
-            }`}
-            aria-label={`Go to fellow ${i + 1}`}
-          />
-        ))}
+      <div className="relative">
+        <div className="hidden md:block">
+          <ArrowButton dir="left" onClick={() => scrollTo(activeIndex - 1)} />
+          <ArrowButton dir="right" onClick={() => scrollTo(activeIndex + 1)} />
+        </div>
+
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={(e) => { handleMouseUp(e); autoPlayRef.current = true; }}
+          onMouseEnter={() => { autoPlayRef.current = false; }}
+          className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 cursor-grab select-none"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          <div className="shrink-0" style={{ width: spacerWidth }} />
+          {fellows.map((f, i) => (
+            <FellowCard key={f.name} fellow={f} index={i} isActive={i === activeIndex} />
+          ))}
+          <div className="shrink-0" style={{ width: spacerWidth }} />
+        </div>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent" />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex justify-center items-center gap-2 mt-6 md:mt-8">
+          {fellows.map((f, i) => (
+            <button
+              key={f.name}
+              onClick={() => scrollTo(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === activeIndex
+                  ? "w-8 bg-gradient-to-r from-cyan-400 to-blue-500"
+                  : "w-1.5 bg-white/20 hover:bg-white/40"
+              }`}
+              aria-label={`Go to fellow ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
