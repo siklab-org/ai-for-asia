@@ -9,13 +9,21 @@ export function Hero() {
     >
       {/* Animated gradient backdrop */}
       <div className="absolute inset-0 bg-background" />
-      <div className="absolute inset-0">
-        <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[60%]" style={{ background: "radial-gradient(ellipse at 30% 30%, rgba(0,96,186,0.10) 0%, transparent 55%)" }} />
-        <div className="absolute -top-[10%] -right-[5%] w-[50%] h-[50%]" style={{ background: "radial-gradient(ellipse at 70% 20%, rgba(198,113,175,0.07) 0%, transparent 50%)" }} />
-        <div className="absolute bottom-[10%] -right-[8%] w-[45%] h-[40%]" style={{ background: "radial-gradient(ellipse at 60% 60%, rgba(227,146,151,0.06) 0%, transparent 50%)" }} />
-      </div>
+      <div className="absolute inset-0 bg-gradient-radial animate-gradient" />
       <div className="absolute inset-0 grid-bg opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+
+      {/* Floating orbs */}
+      <motion.div
+        animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/4 left-10 h-72 w-72 rounded-full bg-[#0060BA] blur-3xl opacity-30"
+      />
+      <motion.div
+        animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-1/4 right-10 h-80 w-80 rounded-full bg-[#C671AF] blur-3xl opacity-30"
+      />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-32 pb-20 w-full">
         <motion.div
