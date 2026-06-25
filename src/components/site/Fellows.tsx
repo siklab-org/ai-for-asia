@@ -24,11 +24,11 @@ export const fellows: Fellow[] = [
   { img: "/fellows/Dylan Joseph Gonzales.jpg", name: "Dylan Joseph Gonzales", quote: "AI is multisectoral — and must be ethical for community.", city: "Manila", country: "Philippines", x: 50, y: 40 },
   { img: "/fellows/41 Trang Nguyen.jpg", name: "Nguyen Thi Huyen Trang", quote: "Governance and workforce adaptation must move in parallel.", city: "Hanoi", country: "Vietnam", x: 25, y: 24 },
   { img: "/fellows/Shine_Min_Kha_photo.jpg", name: "Shine Min Kha", quote: "Leadership is the key skill of the AI-driven era.", city: "Yangon", country: "Myanmar", x: 10, y: 14 },
-  { img: "/fellows/Ahmad Habibulloh.jpg", name: "Ahmad Habibulloh", quote: "AI governance must serve communities across ASEAN.", city: "Taipei", country: "Taiwan", x: 12, y: 10 },
-  { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them.", city: "Manila", country: "Philippines", x: 60, y: 42 },
+  { img: "/fellows/Ahmad Habibulloh.jpg", name: "Ahmad Habibulloh", quote: "AI governance must serve communities across ASEAN.", city: "Taipei", country: "Taiwan", x: 12, y: 10, imageScale: 1.4, imagePosition: "55% 35%" },
+  { img: "/fellows/Hanazel Superal.png", name: "Hanazel Superal", quote: "Technology should bridge gaps, not widen them.", city: "Manila", country: "Philippines", x: 60, y: 42, imageScale: 1.6, imagePosition: "50% 30%" },
   { img: "/fellows/Lee Zhao Yi Charles.jpeg", name: "Lee Zhao Yi Charles", quote: "Building AI that reflects our shared humanity.", city: "Singapore", country: "Singapore", x: 24, y: 57 },
-  { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together.", city: "Singapore", country: "Singapore", x: 27, y: 60 },
-  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", city: "Bangkok", country: "Thailand", x: 15, y: 20, imageScale: 1.5, imagePosition: "center 30%" },
+  { img: "/fellows/Rustam Shariq Mujtaba.jpg", name: "Rustam Shariq Mujtaba", quote: "Policy and innovation must evolve together.", city: "Singapore", country: "Singapore", x: 27, y: 60, imageScale: 1.7, imagePosition: "60% 40%" },
+  { img: "/fellows/Yu Wai Wai Khine.jpeg", name: "Yu Wai Wai Khine", quote: "Inclusive AI starts with diverse voices.", city: "Bangkok", country: "Thailand", x: 15, y: 20, imageScale: 1.8, imagePosition: "40% 40%" },
 ];
 
 export function flagPinSvg(country: string): string {
@@ -49,6 +49,10 @@ export function flagPinSvg(country: string): string {
     case "Taiwan": return flag('<rect x="3" y="7" width="22" height="10" fill="#FE0000"/><rect x="3" y="7" width="11" height="5" fill="#000095"/><circle cx="8.5" cy="9.5" r="2.5" fill="#fff"/><path d="M8.5 7.5 L9 9 L10.5 9 L9.5 10 L10 11.5 L8.5 10.5 L7 11.5 L7.5 10 L6.5 9 L8 9 Z" fill="#fff"/>');
     case "Singapore": return flag('<rect x="3" y="7" width="22" height="5" fill="#ED2939"/><rect x="3" y="12" width="22" height="5" fill="#fff"/><circle cx="8" cy="9.5" r="2.5" fill="#fff"/><circle cx="8" cy="9.5" r="1.8" fill="#ED2939"/>');
     case "Thailand": return flag('<rect x="3" y="7" width="22" height="2" fill="#00247D"/><rect x="3" y="9" width="22" height="2" fill="#fff"/><rect x="3" y="11" width="22" height="2" fill="#CE1126"/><rect x="3" y="13" width="22" height="2" fill="#fff"/><rect x="3" y="15" width="22" height="2" fill="#00247D"/>');
+    case "Malaysia": return flag('<rect x="3" y="7" width="22" height="10" fill="#CC0001"/><rect x="3" y="8.5" width="22" height="1.25" fill="#fff"/><rect x="3" y="10" width="22" height="1.25" fill="#CC0001"/><rect x="3" y="11.5" width="22" height="1.25" fill="#fff"/><rect x="3" y="13" width="22" height="1.25" fill="#CC0001"/><rect x="3" y="14.5" width="22" height="1.25" fill="#fff"/><rect x="3" y="15.75" width="22" height="1.25" fill="#CC0001"/><rect x="3" y="7" width="8.5" height="7.5" fill="#010066"/><polygon points="7.25,8.5 8,10.5 10,10.5 8.5,11.8 9,14 7.25,12.5 5.5,14 6,11.8 4.5,10.5 6.5,10.5" fill="#FFCC00"/>');
+    case "Brunei Darussalam": return flag('<rect x="3" y="7" width="22" height="10" fill="#F7E017"/><polygon points="3,9 20,7 25,16 8,17" fill="#fff"/><polygon points="3,15 20,17 25,8 8,7" fill="#000"/>');
+    case "Timor Leste": return flag('<rect x="3" y="7" width="22" height="10" fill="#DA291C"/><polygon points="3,7 15,12 3,17" fill="#000"/><polygon points="3,7 9,12 3,17" fill="#FFC72C"/><polygon points="6,9.5 7,12.5 10,12.5 7.5,14.5 8.5,17.5 6,15.5 3.5,17.5 4.5,14.5 2,12.5 5,12.5" fill="#fff"/>');
+    case "Cambodia": return flag('<rect x="3" y="7" width="22" height="10" fill="#00247D"/><rect x="3" y="9" width="22" height="6" fill="#CE1126"/><polygon points="14,9.5 11,11 17,11" fill="#fff"/><rect x="12.5" y="10.5" width="3" height="2.5" fill="#fff"/>');
     default: return "";
   }
 }
@@ -136,9 +140,8 @@ function FellowCard({ fellow, index, isActive }: { fellow: Fellow; index: number
       onMouseEnter={() => !isTouch.current && setHovered(true)}
       onMouseLeave={() => !isTouch.current && setHovered(false)}
       data-card
-      className={`group shrink-0 snap-center px-2 md:px-3 transition-all duration-500 ${
-        isActive ? "scale-100 opacity-100" : "scale-95 opacity-40"
-      }`}
+      className={`group shrink-0 snap-center px-2 md:px-3 transition-all duration-500 ${isActive ? "scale-100 opacity-100" : "scale-95 opacity-40"
+        }`}
       style={{ width: "clamp(240px, 28vw, 320px)", scrollSnapStop: "always" }}
     >
       <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.03] shadow-xl">
@@ -147,7 +150,12 @@ function FellowCard({ fellow, index, isActive }: { fellow: Fellow; index: number
           alt={fellow.name}
           fill
           sizes="(max-width: 768px) 80vw, 320px"
-          className="object-cover transition-all duration-700 group-hover:scale-105"
+          className="object-cover transition-all duration-700"
+          style={{
+            transform: `scale(${(hovered ? 1.05 : 1) * (fellow.imageScale || 1)})`,
+            transformOrigin: fellow.imagePosition || "center center",
+            objectPosition: fellow.imagePosition || "center",
+          }}
         />
 
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
@@ -321,11 +329,10 @@ export function Fellows() {
             <button
               key={f.name}
               onClick={() => scrollTo(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === activeIndex
+              className={`h-1.5 rounded-full transition-all duration-500 ${i === activeIndex
                   ? "w-8 bg-gradient-to-r from-cyan-400 to-blue-500"
                   : "w-1.5 bg-white/20 hover:bg-white/40"
-              }`}
+                }`}
               aria-label={`Go to fellow ${i + 1}`}
             />
           ))}
