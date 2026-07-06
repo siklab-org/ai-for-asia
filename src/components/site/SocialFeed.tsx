@@ -187,8 +187,6 @@ export function SocialFeed() {
           <div className="shrink-0" style={{ width: spacerWidth }} />
         </div>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6">

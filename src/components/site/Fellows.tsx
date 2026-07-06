@@ -118,6 +118,76 @@ export const fellows: Fellow[] = [
   },
 ];
 
+export const rawNewFellows: Fellow[] = [
+  { img: "", name: "Elena Thompson", quote: "", city: "Jakarta", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Kamila Nurhusna", quote: "", city: "Jakarta", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Fabiandika Nawfal Azzarel", quote: "", city: "Jakarta", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Geby Monica Simbolon", quote: "", city: "Medan", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Edwinsyah Umasugi", quote: "", city: "Jayapura", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "James Cahyadi Purnomo", quote: "", city: "Surabaya", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Joko Susilo", quote: "", city: "Yogyakarta", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Patrick Kurniawan", quote: "", city: "Bandung", country: "Indonesia", x: 0, y: 0 },
+  { img: "", name: "Kah Wei Tan", quote: "", city: "Kuala Lumpur", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Vanessa Scully", quote: "", city: "Kuala Lumpur", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Ruthra Mary Ramachandran", quote: "", city: "Kuala Lumpur", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Srre Vaishnavi Palanisamy", quote: "", city: "Kuala Lumpur", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Wei Liang Ho", quote: "", city: "Penang", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Mohamad Alfatihah Fahmi Farid", quote: "", city: "Kuala Lumpur", country: "Malaysia", x: 0, y: 0 },
+  { img: "", name: "Lành Đỗ", quote: "", city: "Ho Chi Minh City", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Quynh Nhi Pham", quote: "", city: "Ho Chi Minh City", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Ha Phan", quote: "", city: "Ho Chi Minh City", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Hong Thien Trang Pham", quote: "", city: "Hanoi", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Trang Nguyen", quote: "", city: "Hanoi", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "An Pham", quote: "", city: "Ho Chi Minh City", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Ngoc Kieu Tien Nguyen", quote: "", city: "Ho Chi Minh City", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Van Chinh Pham", quote: "", city: "Hanoi", country: "Vietnam", x: 0, y: 0 },
+  { img: "", name: "Jorjani Sinsuat", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Renz Nathaniel Luyao", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "John Niño Derecho", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Keb Cuevas", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Abdel Jalal Sinapilo", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Jamil Andrew Orata", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Gabrielle Mae Arco", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Maria Lourdes Malipol", quote: "", city: "Manila", country: "Philippines", x: 0, y: 0 },
+  { img: "", name: "Hnin Ei San", quote: "", city: "Yangon", country: "Myanmar", x: 0, y: 0 },
+  { img: "", name: "Shin Thant Phyo", quote: "", city: "Yangon", country: "Myanmar", x: 0, y: 0 },
+  { img: "", name: "Thint Myat Thiri Htun", quote: "", city: "Yangon", country: "Myanmar", x: 0, y: 0 },
+  { img: "", name: "Min Kyal Sin Thant", quote: "", city: "Yangon", country: "Myanmar", x: 0, y: 0 },
+  { img: "", name: "Khun Sint Phoo Wai", quote: "", city: "Yangon", country: "Myanmar", x: 0, y: 0 },
+  { img: "", name: "Alex wen jie Lew", quote: "", city: "Singapore", country: "Singapore", x: 0, y: 0 },
+  { img: "", name: "DK Ummi Nurazila Azzayaty PG Hassanal Ali Saifuddin", quote: "", city: "Bandar Seri Begawan", country: "Brunei Darussalam", x: 0, y: 0 },
+  { img: "", name: "Arif Syahmi", quote: "", city: "Bandar Seri Begawan", country: "Brunei Darussalam", x: 0, y: 0 },
+  { img: "", name: "Medialin Elrna Anak Mukan", quote: "", city: "Bandar Seri Begawan", country: "Brunei Darussalam", x: 0, y: 0 },
+  { img: "", name: "Nurfarah Aliaa Binti Haji Suhaimi", quote: "", city: "Bandar Seri Begawan", country: "Brunei Darussalam", x: 0, y: 0 },
+  { img: "", name: "Livorio Moniz da Conceição Amaral", quote: "", city: "Dili", country: "Timor Leste", x: 0, y: 0 },
+  { img: "", name: "Marcelino de Andrade", quote: "", city: "Dili", country: "Timor Leste", x: 0, y: 0 },
+  { img: "", name: "Paulo Silva", quote: "", city: "Dili", country: "Timor Leste", x: 0, y: 0 },
+  { img: "", name: "Ajito Nelson Lucio da Costa", quote: "", city: "Dili", country: "Timor Leste", x: 0, y: 0 },
+  { img: "", name: "Graziela Neuza De Deus Martins", quote: "", city: "Dili", country: "Timor Leste", x: 0, y: 0 },
+  { img: "", name: "Pichsereyvathanak Khy", quote: "", city: "Phnom Penh", country: "Cambodia", x: 0, y: 0 },
+  { img: "", name: "Livhoung Hour", quote: "", city: "Phnom Penh", country: "Cambodia", x: 0, y: 0 },
+  { img: "", name: "Layhok Leng", quote: "", city: "Phnom Penh", country: "Cambodia", x: 0, y: 0 },
+  { img: "", name: "Hongchhay Chheng", quote: "", city: "Phnom Penh", country: "Cambodia", x: 0, y: 0 },
+  { img: "", name: "Prued Wahachart", quote: "", city: "Bangkok", country: "Thailand", x: 0, y: 0 },
+];
+
+// Deduplicate fellows (carousel + rawNewFellows)
+const carouselNames = new Set(fellows.map((f) => f.name.toLowerCase()));
+const deduped: Fellow[] = [];
+const seen = new Set<string>();
+for (const f of rawNewFellows) {
+  const key = f.name.toLowerCase();
+  if (!carouselNames.has(key) && !seen.has(key)) {
+    deduped.push(f);
+    seen.add(key);
+  }
+}
+const allFellows: Fellow[] = [...fellows, ...deduped];
+const allFellowsSorted = [...allFellows].sort((a, b) => {
+  if (a.country !== b.country) return a.country.localeCompare(b.country);
+  return a.name.localeCompare(b.name);
+});
+
 export function flagPinSvg(country: string): string {
   const size = 28;
   const flag = (paths: string) => `
@@ -481,7 +551,16 @@ export function Fellows() {
     e.currentTarget.classList.remove("cursor-grabbing");
   }, []);
 
+  const [fellowPage, setFellowPage] = useState(0);
+  const FELLOWS_PER_PAGE = 12;
+  const totalFellowPages = Math.ceil(allFellowsSorted.length / FELLOWS_PER_PAGE);
+  const paginatedFellows = useMemo(
+    () => allFellowsSorted.slice(fellowPage * FELLOWS_PER_PAGE, (fellowPage + 1) * FELLOWS_PER_PAGE),
+    [fellowPage],
+  );
+
   return (
+    <>
     <section id="fellows" className="relative py-28 md:py-36 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 md:mb-20">
@@ -528,8 +607,6 @@ export function Fellows() {
           <div className="shrink-0" style={{ width: spacerWidth }} />
         </div>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-12 md:w-20 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-12 md:w-20 bg-gradient-to-l from-black via-black/80 to-transparent" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6">
@@ -549,5 +626,76 @@ export function Fellows() {
         </div>
       </div>
     </section>
+
+    <section id="all-fellows" className="relative py-16 md:py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-10 md:mb-14">
+          <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
+            / Fellows &middot; 2025
+          </span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-[1.1]">
+            Across <span className="text-gradient">Southeast Asia</span>.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          {paginatedFellows.map((f) => (
+            <div
+              key={f.name}
+              className="rounded-xl border border-white/10 bg-white/[0.03] p-4 md:p-5 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-300"
+            >
+              <p className="text-sm md:text-base font-semibold text-white leading-tight">
+                {f.name}
+              </p>
+              <div className="flex items-center gap-1.5 mt-2">
+                <span
+                  dangerouslySetInnerHTML={{ __html: flagPinSvg(f.country) }}
+                  className="w-5 h-5 inline-flex shrink-0"
+                />
+                <p className="text-[11px] md:text-xs text-white/50 font-light tracking-wide">
+                  {f.city}, {f.country}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {totalFellowPages > 1 && (
+          <div className="flex justify-center items-center gap-3 mt-10">
+            <button
+              onClick={() => setFellowPage(Math.max(0, fellowPage - 1))}
+              disabled={fellowPage === 0}
+              className="w-9 h-9 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/60 hover:text-white hover:border-white/30 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              aria-label="Previous page"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            {Array.from({ length: totalFellowPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setFellowPage(i)}
+                className={`w-8 h-8 rounded-full text-xs font-medium transition-all ${
+                  i === fellowPage
+                    ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white"
+                    : "border border-white/10 bg-white/[0.03] text-white/50 hover:text-white hover:border-white/30"
+                }`}
+                aria-label={`Go to page ${i + 1}`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => setFellowPage(Math.min(totalFellowPages - 1, fellowPage + 1))}
+              disabled={fellowPage === totalFellowPages - 1}
+              className="w-9 h-9 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/60 hover:text-white hover:border-white/30 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              aria-label="Next page"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+    </>
   );
 }
