@@ -151,7 +151,7 @@ function SpeakerCard({
       <motion.div
         whileHover={{ y: -6 }}
         onClick={() => onSelect(speaker)}
-        className="relative h-[320px] sm:h-[450px] rounded-2xl overflow-hidden glass cursor-pointer group"
+        className="relative h-[320px] sm:h-[450px] rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
       >
         {/* Portrait */}
         <div className="absolute inset-0">
@@ -200,7 +200,7 @@ function SpeakerCard({
             {speaker.role}
           </div>
           <div className="mt-3">
-            <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
+            <div className="inline-flex items-center bg-black/60 rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
               <div className="relative h-10 w-[130px]">
                 <Image
                   src={speaker.logo}
@@ -307,7 +307,7 @@ function SpeakerModal({
 
               {/* Logo */}
               <div className="mt-4">
-                <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
+                <div className="inline-flex items-center bg-black/60 rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
                   <div className="relative h-9 w-[140px]">
                     <Image
                       src={speaker.logo}

@@ -25,9 +25,6 @@ function ArrowButton({ dir, onClick }: { dir: "left" | "right"; onClick: () => v
 }
 
 function SocialCard({ post, index, isActive }: { post: typeof socialPosts[number]; index: number; isActive: boolean }) {
-  const firstImage = post.images[0];
-  const isMultiImage = post.images.length > 1;
-
   return (
     <a
       href={post.permalink}
@@ -42,16 +39,11 @@ function SocialCard({ post, index, isActive }: { post: typeof socialPosts[number
       <div className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden hover:border-white/30 transition-all duration-500 hover:-translate-y-1">
         <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
           <img
-            src={firstImage}
+            src={post.images[0]}
             alt=""
             loading="lazy"
             className="h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
           />
-          {isMultiImage && (
-            <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-xs text-white/80 font-medium">
-              +{post.images.length - 1} photos
-            </div>
-          )}
         </div>
 
         <div className="p-4 md:p-5">

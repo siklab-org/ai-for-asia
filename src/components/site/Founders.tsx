@@ -46,7 +46,7 @@ function FounderCard({
       <motion.div
         whileHover={{ y: -8, scale: 1.02 }}
         onClick={() => onSelect(founder)}
-        className="relative h-[520px] rounded-3xl overflow-hidden glass cursor-pointer group"
+        className="relative h-[520px] rounded-3xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
       >
         {/* Portrait — fills most of card */}
         <div className="absolute inset-0">
@@ -219,7 +219,7 @@ function FounderModal({
 
               {/* Logo */}
               <div className="mt-5">
-                <div className="inline-flex items-center bg-white/[0.4] backdrop-blur-md rounded-xl px-4 py-3 border border-white/25 shadow-lg">
+            <div className="inline-flex items-center bg-black/60 rounded-xl px-4 py-3 border border-white/25 shadow-lg">
                   <div className="relative h-10 w-[140px]">
                     <Image
                       src={founder.logo}
