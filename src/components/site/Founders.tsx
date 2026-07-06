@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { Reveal } from "./Reveal";
 
 interface Founder {
   img: string;
@@ -42,12 +41,11 @@ function FounderCard({
   onSelect: (f: Founder) => void;
 }) {
   return (
-    <Reveal delay={index * 0.1}>
-      <motion.div
-        whileHover={{ y: -8, scale: 1.02 }}
-        onClick={() => onSelect(founder)}
-        className="relative h-[520px] rounded-3xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
-      >
+    <motion.div
+      whileHover={{ y: -8, scale: 1.02 }}
+      onClick={() => onSelect(founder)}
+      className="relative h-[520px] rounded-3xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
+    >
         {/* Portrait — fills most of card */}
         <div className="absolute inset-0">
           <Image
@@ -124,7 +122,6 @@ function FounderCard({
           </div>
         </div>
       </motion.div>
-    </Reveal>
   );
 }
 
@@ -258,22 +255,16 @@ export function Founders() {
         <div className="relative mx-auto max-w-5xl">
           {/* Header */}
           <div className="text-center mb-16">
-            <Reveal>
-              <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
-                / Founders
-              </span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-5 text-4xl md:text-6xl font-bold tracking-tight">
-                Meet the{" "}
-                <span className="text-gradient">Founders</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={0.2}>
-              <p className="mt-5 text-muted-foreground max-w-lg mx-auto">
-                The visionaries driving AI opportunity across Southeast Asia.
-              </p>
-            </Reveal>
+            <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
+              / Founders
+            </span>
+            <h2 className="mt-5 text-4xl md:text-6xl font-bold tracking-tight">
+              Meet the{" "}
+              <span className="text-gradient">Founders</span>
+            </h2>
+            <p className="mt-5 text-muted-foreground max-w-lg mx-auto">
+              The visionaries driving AI opportunity across Southeast Asia.
+            </p>
           </div>
 
           {/* Cards — centered 2-column layout */}
@@ -289,13 +280,11 @@ export function Founders() {
           </div>
 
           {/* Decorative divider */}
-          <Reveal delay={0.3}>
-            <div className="flex items-center justify-center gap-4 mt-16">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
-              <div className="w-2 h-2 rounded-full bg-gradient-brand" />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
-            </div>
-          </Reveal>
+          <div className="flex items-center justify-center gap-4 mt-16">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-white/20" />
+            <div className="w-2 h-2 rounded-full bg-gradient-brand" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-white/20" />
+          </div>
         </div>
       </section>
 

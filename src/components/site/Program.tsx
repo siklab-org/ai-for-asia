@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Reveal } from "./Reveal";
 
 const areas = [
   { img: "/icons/AI Literacy.svg", title: "AI Literacy", desc: "Foundations of artificial intelligence." },
@@ -84,14 +83,10 @@ export function Program() {
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between flex-wrap gap-6 mb-12 md:mb-20">
           <div>
-            <Reveal>
-              <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">/ Program</span>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <h2 className="mt-4 text-3xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]">
-                Six areas of <span className="text-gradient">work</span>.
-              </h2>
-            </Reveal>
+            <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">/ Program</span>
+            <h2 className="mt-4 text-3xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]">
+              Six areas of <span className="text-gradient">work</span>.
+            </h2>
           </div>
         </div>
 

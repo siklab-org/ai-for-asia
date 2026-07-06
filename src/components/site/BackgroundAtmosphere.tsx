@@ -1,7 +1,5 @@
 "use client";
 
-import { useScroll, useTransform, motion, type MotionValue } from "motion/react";
-
 function RotatingBlur({
   color,
   size,
@@ -12,7 +10,6 @@ function RotatingBlur({
   scaleMin,
   scaleMax,
   blurAmount,
-  scrollY,
 }: {
   color: string;
   size: number;
@@ -23,14 +20,11 @@ function RotatingBlur({
   scaleMin: number;
   scaleMax: number;
   blurAmount: string;
-  scrollY: MotionValue<number>;
 }) {
-  const y = useTransform(scrollY, [0, 15000], [0, -300], { clamp: true });
-
   return (
-    <motion.div
-      style={{ y, top, left, width: size, height: size, opacity }}
-      className="absolute pointer-events-none"
+    <div
+      className="absolute pointer-events-none will-change-transform"
+      style={{ top, left, width: size, height: size, opacity }}
     >
       <div
         className="absolute inset-0"
@@ -42,7 +36,7 @@ function RotatingBlur({
           ["--scale-max" as string]: scaleMax,
         }}
       />
-    </motion.div>
+    </div>
   );
 }
 
@@ -53,7 +47,6 @@ function StaticWash({
   left,
   opacity,
   blurAmount,
-  scrollY,
 }: {
   color: string;
   size: number;
@@ -61,14 +54,11 @@ function StaticWash({
   left: string;
   opacity: number;
   blurAmount: string;
-  scrollY: MotionValue<number>;
 }) {
-  const y = useTransform(scrollY, [0, 15000], [0, -150], { clamp: true });
-
   return (
-    <motion.div
-      style={{ y, top, left, width: size, height: size, opacity }}
-      className="absolute pointer-events-none rounded-full"
+    <div
+      className="absolute pointer-events-none rounded-full will-change-transform"
+      style={{ top, left, width: size, height: size, opacity }}
     >
       <div
         className="absolute inset-0 rounded-full"
@@ -77,32 +67,29 @@ function StaticWash({
           filter: `blur(${blurAmount})`,
         }}
       />
-    </motion.div>
+    </div>
   );
 }
 
 export function BackgroundAtmosphere() {
-  const { scrollY } = useScroll();
-  const fadeOut = useTransform(scrollY, [0, 3000, 12000, 15000], [1, 1, 0.3, 0.15], { clamp: true });
-
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
       <div className="absolute inset-0 bg-background" />
 
-      {/* Large rotating blur elements — CSS keyframes, single scroll listener */}
-      <RotatingBlur color="#0060BA" size={1200} top="-15%" left="-20%" opacity={0.7} rotationSpeed={35} scaleMin={0.85} scaleMax={1.2} blurAmount="80px" scrollY={scrollY} />
-      <RotatingBlur color="#C671AF" size={1000} top="15%" left="50%" opacity={0.65} rotationSpeed={45} scaleMin={0.8} scaleMax={1.25} blurAmount="70px" scrollY={scrollY} />
-      <RotatingBlur color="#8561C5" size={950} top="45%" left="-15%" opacity={0.6} rotationSpeed={40} scaleMin={0.85} scaleMax={1.15} blurAmount="75px" scrollY={scrollY} />
-      <RotatingBlur color="#E39297" size={900} top="60%" left="55%" opacity={0.55} rotationSpeed={50} scaleMin={0.82} scaleMax={1.22} blurAmount="65px" scrollY={scrollY} />
-      <RotatingBlur color="#336FCF" size={850} top="80%" left="5%" opacity={0.5} rotationSpeed={38} scaleMin={0.88} scaleMax={1.18} blurAmount="70px" scrollY={scrollY} />
-      <RotatingBlur color="#C671AF" size={800} top="90%" left="60%" opacity={0.45} rotationSpeed={42} scaleMin={0.9} scaleMax={1.1} blurAmount="60px" scrollY={scrollY} />
+      {/* Large rotating blur elements — CSS keyframes only, no scroll listener */}
+      <RotatingBlur color="#0060BA" size={1200} top="-15%" left="-20%" opacity={0.7} rotationSpeed={35} scaleMin={0.85} scaleMax={1.2} blurAmount="80px" />
+      <RotatingBlur color="#C671AF" size={1000} top="15%" left="50%" opacity={0.65} rotationSpeed={45} scaleMin={0.8} scaleMax={1.25} blurAmount="70px" />
+      <RotatingBlur color="#8561C5" size={950} top="45%" left="-15%" opacity={0.6} rotationSpeed={40} scaleMin={0.85} scaleMax={1.15} blurAmount="75px" />
+      <RotatingBlur color="#E39297" size={900} top="60%" left="55%" opacity={0.55} rotationSpeed={50} scaleMin={0.82} scaleMax={1.22} blurAmount="65px" />
+      <RotatingBlur color="#336FCF" size={850} top="80%" left="5%" opacity={0.5} rotationSpeed={38} scaleMin={0.88} scaleMax={1.18} blurAmount="70px" />
+      <RotatingBlur color="#C671AF" size={800} top="90%" left="60%" opacity={0.45} rotationSpeed={42} scaleMin={0.9} scaleMax={1.1} blurAmount="60px" />
 
       {/* Static color washes for consistent coverage */}
-      <StaticWash color="#0060BA" size={800} top="5%" left="60%" opacity={0.35} blurAmount="90px" scrollY={scrollY} />
-      <StaticWash color="#8561C5" size={700} top="30%" left="30%" opacity={0.3} blurAmount="80px" scrollY={scrollY} />
-      <StaticWash color="#E39297" size={650} top="50%" left="80%" opacity={0.3} blurAmount="75px" scrollY={scrollY} />
-      <StaticWash color="#336FCF" size={600} top="70%" left="40%" opacity={0.28} blurAmount="70px" scrollY={scrollY} />
-      <StaticWash color="#C671AF" size={550} top="85%" left="25%" opacity={0.25} blurAmount="65px" scrollY={scrollY} />
+      <StaticWash color="#0060BA" size={800} top="5%" left="60%" opacity={0.35} blurAmount="90px" />
+      <StaticWash color="#8561C5" size={700} top="30%" left="30%" opacity={0.3} blurAmount="80px" />
+      <StaticWash color="#E39297" size={650} top="50%" left="80%" opacity={0.3} blurAmount="75px" />
+      <StaticWash color="#336FCF" size={600} top="70%" left="40%" opacity={0.28} blurAmount="70px" />
+      <StaticWash color="#C671AF" size={550} top="85%" left="25%" opacity={0.25} blurAmount="65px" />
 
       {/* Full-height brand gradient */}
       <div
@@ -128,11 +115,6 @@ export function BackgroundAtmosphere() {
           backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0.05) 2px)",
           backgroundSize: "100% 3px",
         }}
-      />
-
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background pointer-events-none"
-        style={{ opacity: fadeOut }}
       />
 
       <div className="absolute inset-0 noise opacity-[0.02] pointer-events-none" />

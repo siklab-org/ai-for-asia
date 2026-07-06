@@ -4,7 +4,6 @@ import { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Reveal } from "./Reveal";
 
 export interface Fellow {
   img: string;
@@ -486,16 +485,12 @@ export function Fellows() {
     <section id="fellows" className="relative py-28 md:py-36 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 md:mb-20">
-          <Reveal>
-            <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
-              / Outstanding Fellows &middot; 2025
-            </span>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
-              Voices shaping <span className="text-gradient">tomorrow</span>.
-            </h2>
-          </Reveal>
+          <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
+            / Outstanding Fellows &middot; 2025
+          </span>
+          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
+            Voices shaping <span className="text-gradient">tomorrow</span>.
+          </h2>
         </div>
       </div>
 

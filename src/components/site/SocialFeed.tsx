@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import { Reveal } from "./Reveal";
 import { socialPosts } from "@/data/social-feed";
 
 function formatDate(dateStr: string): string {
@@ -155,16 +154,12 @@ export function SocialFeed() {
     <section id="social" className="relative py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 md:mb-20">
-          <Reveal>
-            <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
-              / Social
-            </span>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-              From the <span className="text-gradient">feed</span>.
-            </h2>
-          </Reveal>
+          <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
+            / Social
+          </span>
+          <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
+            From the <span className="text-gradient">feed</span>.
+          </h2>
         </div>
       </div>
 

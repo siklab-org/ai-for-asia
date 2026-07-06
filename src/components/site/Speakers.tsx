@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { Reveal } from "./Reveal";
 
 interface Speaker {
   img: string;
@@ -147,12 +146,11 @@ function SpeakerCard({
   onSelect: (s: Speaker) => void;
 }) {
   return (
-    <Reveal delay={(index % 5) * 0.05}>
-      <motion.div
-        whileHover={{ y: -6 }}
-        onClick={() => onSelect(speaker)}
-        className="relative h-[320px] sm:h-[450px] rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
-      >
+    <motion.div
+      whileHover={{ y: -6 }}
+      onClick={() => onSelect(speaker)}
+      className="relative h-[320px] sm:h-[450px] rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
+    >
         {/* Portrait */}
         <div className="absolute inset-0">
           <Image
@@ -214,7 +212,6 @@ function SpeakerCard({
           </div>
         </div>
       </motion.div>
-    </Reveal>
   );
 }
 
@@ -345,23 +342,17 @@ export function Speakers() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-end justify-between flex-wrap gap-6 mb-16">
             <div>
-              <Reveal>
-                <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
-                  / Previous Speakers
-                </span>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
-                  Past <span className="text-gradient">voices</span>.
-                </h2>
-              </Reveal>
+              <span className="text-xs uppercase tracking-[0.3em] text-gradient font-medium">
+                / Previous Speakers
+              </span>
+              <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
+                Past <span className="text-gradient">voices</span>.
+              </h2>
             </div>
-            <Reveal delay={0.2}>
-              <div className="text-sm text-muted-foreground max-w-xs">
-                Speakers from previous cohorts — the UN, Microsoft, Oxford, and
-                ASEAN&apos;s leading institutions.
-              </div>
-            </Reveal>
+            <div className="text-sm text-muted-foreground max-w-xs">
+              Speakers from previous cohorts — the UN, Microsoft, Oxford, and
+              ASEAN&apos;s leading institutions.
+            </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
