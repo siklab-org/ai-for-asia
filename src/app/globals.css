@@ -255,3 +255,14 @@
   background-size: 200% 200%;
   animation: gradient-shift 8s ease infinite;
 }
+
+@keyframes bg-rotate-scale {
+  0%   { transform: rotate(0deg)   scale(var(--scale-min, 0.85)); }
+  15%  { transform: rotate(54deg)  scale(var(--scale-max, 1.2)); }
+  30%  { transform: rotate(108deg) scale(var(--scale-min, 0.85)); }
+  45%  { transform: rotate(162deg) scale(var(--scale-max, 1.2)); }
+  60%  { transform: rotate(216deg) scale(var(--scale-min, 0.85)); }
+  75%  { transform: rotate(270deg) scale(var(--scale-max, 1.2)); }
+  90%  { transform: rotate(324deg) scale(var(--scale-min, 0.85)); }
+  100% { transform: rotate(360deg) scale(var(--scale-min, 0.85)); }
+}
