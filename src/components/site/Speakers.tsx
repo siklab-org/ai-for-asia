@@ -205,13 +205,14 @@ function SpeakerCard({
                   alt=""
                   fill
                   sizes="130px"
-                  className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
-                />
+                    className={`object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)] ${speaker.logo === "/speaker-logos/siklab.png" ? "brightness-0 invert" : ""}`}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> 
   );
 }
 
@@ -311,7 +312,7 @@ function SpeakerModal({
                       alt=""
                       fill
                       sizes="140px"
-                      className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
+                      className={`object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)] ${speaker.logo === "/speaker-logos/siklab.png" ? "brightness-0 invert" : ""}`}
                     />
                   </div>
                 </div>
