@@ -97,17 +97,32 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="mt-16 flex items-center gap-3"
+          className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3"
         >
-          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            Supported by
-          </span>
-          <span className="h-px w-8 bg-white/10" />
-          <img
-            src="/partners/nyc-white.png"
-            alt="National Youth Council Singapore"
-            className="h-20 w-auto opacity-80"
-          />
+          <div className="flex items-center gap-3">
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Supported by
+            </span>
+            <span className="h-px w-8 bg-white/10" />
+            <img
+              src="/partners/nyc-white.png"
+              alt="National Youth Council Singapore"
+              className="h-20 w-auto opacity-80"
+            />
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              Developed by
+            </span>
+            <span className="h-px w-8 bg-white/10" />
+            <Image
+              src="/speaker-logos/siklab.png"
+              alt="Siklab Pilipinas"
+              width={120}
+              height={40}
+              className="h-10 w-auto opacity-80 brightness-0 invert"
+            />
+          </div>
         </motion.div>
 
         {/* Floating logo */}

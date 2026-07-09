@@ -223,7 +223,7 @@ function FounderModal({
                       alt=""
                       fill
                       sizes="140px"
-                      className="object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
+                      className={`object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)] ${founder.logo === "/speaker-logos/siklab.png" ? "brightness-0 invert" : ""}`}
                     />
                   </div>
                 </div>

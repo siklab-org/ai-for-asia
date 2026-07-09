@@ -87,6 +87,9 @@ export function Program() {
             <h2 className="mt-4 text-3xl md:text-6xl font-bold tracking-tight max-w-2xl leading-[1.05]">
               Six areas of <span className="text-gradient">work</span>.
             </h2>
+            <p className="mt-6 max-w-2xl text-muted-foreground">
+              The AI for Asia Fellowship isn&apos;t built around a single idea of what AI should do. Fellows work across six interconnected areas, AI literacy, policy and ethics, workforce development, research, innovation, and community, each one essential to building a future where AI works for everyone in the region, not just a few.
+            </p>
           </div>
         </div>
 

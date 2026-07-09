@@ -570,6 +570,9 @@ export function Fellows() {
           <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
             Voices shaping <span className="text-gradient">tomorrow</span>.
           </h2>
+          <p className="mt-6 max-w-2xl text-muted-foreground">
+            The 2025 Outstanding Fellows came in as changemakers and left as a community. From policy to product, from Manila to Singapore, they&apos;re the proof that responsible AI in Asia isn&apos;t a distant goal, it&apos;s already being built.
+          </p>
         </div>
       </div>
 
@@ -636,6 +639,9 @@ export function Fellows() {
           <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight max-w-3xl leading-[1.1]">
             Across <span className="text-gradient">Southeast Asia</span>.
           </h2>
+          <p className="mt-6 max-w-2xl text-muted-foreground">
+            The 2025 cohort brought together fellows from every corner of the region, from Bandar Seri Begawan to Jakarta, Phnom Penh to Manila. Different countries, different languages, different challenges. One shared conviction: that AI in Asia should be built by the people who actually live here.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">

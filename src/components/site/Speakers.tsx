@@ -211,8 +211,7 @@ function SpeakerCard({
               </div>
             </div>
           </div>
-        </div>
-      </motion.div> 
+      </motion.div>
   );
 }
 

@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const items = [
   { img: "/icons/Expand.svg", title: "Expand", desc: "Reaching all 11 ASEAN nations, ensuring no country is left out of Asia's AI moment." },
-  { img: "/icons/Deepen.svg", title: "Deepen", desc: "Industry & academic partnerships." },
-  { img: "/icons/Sustain.svg", title: "Sustain", desc: "Year-round alumni innovation." },
+  { img: "/icons/Deepen.svg", title: "Deepen", desc: "Forging partnerships with industry and academia to turn ideas into real impact." },
+  { img: "/icons/Sustain.svg", title: "Sustain", desc: "Keeping the network alive and building, long after the fellowship ends." },
 ];
 
 export function Future() {
@@ -14,6 +14,9 @@ export function Future() {
         <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight max-w-3xl leading-[1.05]">
           What&apos;s <span className="text-gradient">next</span>.
         </h2>
+        <p className="mt-6 max-w-2xl text-muted-foreground">
+          The 2025 cohort was just the beginning. Here&apos;s where AI for Asia goes from here.
+        </p>
 
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           {items.map((it, i) => (
@@ -29,7 +32,7 @@ export function Future() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="text-xs text-muted-foreground">0{i + 1}</div>
+                <div className="text-xs text-muted-foreground">0{i + 1} ·</div>
                 <h3 className="mt-2 text-3xl font-bold">{it.title}</h3>
                 <p className="mt-2 text-muted-foreground">{it.desc}</p>
               </div>

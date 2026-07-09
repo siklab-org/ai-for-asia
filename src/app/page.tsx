@@ -9,6 +9,7 @@ import { Program } from "@/components/site/Program";
 import { UpcomingSpeakers } from "@/components/site/UpcomingSpeakers";
 import { Speakers } from "@/components/site/Speakers";
 import { Founders } from "@/components/site/Founders";
+import { Advisors } from "@/components/site/Advisors";
 import { Impact } from "@/components/site/Impact";
 import { Partners } from "@/components/site/Partners";
 import { Fellows } from "@/components/site/Fellows";
@@ -34,6 +35,7 @@ export default function Home() {
         <UpcomingSpeakers />
         <Speakers />
         <Founders />
+        <Advisors />
         <Fellows />
         <Future />
         <SocialFeed />
