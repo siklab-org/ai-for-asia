@@ -70,26 +70,18 @@ export function Hero() {
           className="mt-10 flex flex-wrap gap-3"
         >
           <a
-            href="https://form.typeform.com/to/NOTrA2Qg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-brand animate-gradient text-white font-medium px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity"
-          >
-            Become a Fellow
-          </a>
-          <a
             href="#about"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
           >
             Learn more
           </a>
           <a
-            href="https://drive.google.com/file/d/1L6iBEtBjJxUqfj04alYvuqMRUrEXCI8Y/view?usp=sharing"
+            href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
           >
-            Program Briefer →
+            See More
           </a>
         </motion.div>
 

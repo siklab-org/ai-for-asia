@@ -14,12 +14,12 @@ export function CTA() {
             </p>
             <div className="mt-10 flex flex-wrap gap-3 justify-center">
               <a
-                href="https://form.typeform.com/to/NOTrA2Qg"
+                href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[#0060BA] font-semibold px-8 py-4 rounded-full hover:scale-105 transition-transform"
               >
-                Apply now
+                Program Briefer →
               </a>
               <a
                 href="#apply"

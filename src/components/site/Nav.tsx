@@ -44,10 +44,12 @@ export function Nav() {
             ))}
           </nav>
           <a
-            href="https://form.typeform.com/to/NOTrA2Qg"
+            href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gradient-brand animate-gradient text-white text-sm font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
           >
-            Apply →
+            See More
           </a>
         </motion.div>
       </div>
