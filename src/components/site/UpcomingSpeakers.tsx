@@ -7,69 +7,111 @@ import Image from "next/image";
 interface UpcomingSpeaker {
   img: string;
   name: string;
-  role: string;
-  logo: string;
-  bio: string;
+  role?: string;
+  logo?: string;
+  bio?: string;
 }
 
 /* ─── Data ─────────────────────────────────────────────── */
 
-const placeholders: (UpcomingSpeaker | undefined)[] = Array.from({ length: 8 });
+const speakers: UpcomingSpeaker[] = [
+  {
+    img: "/new-speakers/1.png",
+    name: "Rose Sagun",
+    role: "Education Specialist, Asian Development Bank",
+    bio: "Rose is an Education Specialist at the Education Practice Team, Sector Group, Asian Development Bank. Before joining ADB, she worked at the Education Commission in Washington D.C., which was co-convened by the former Director-General of UNESCO and the UN Special Envoy for Global Education. She has worked on adaptive, personalized learning; digital learning/EdTech initiatives; and studying the interface between technology and human interaction, learning, and pedagogy. She served as the Co-Chair of Harvard Alumni for Education \u2014 San Francisco Bay Area chapter. She holds a Master\u2019s degree in International Education Policy from Harvard University.",
+  },
+  {
+    img: "/new-speakers/2.png",
+    name: "Rustam Shariq Mujtaba",
+  },
+  {
+    img: "/new-speakers/3.png",
+    name: "Edward Yee",
+    role: "Co-Founder, AI for Asia",
+    bio: "Edward Yee is a serial social entrepreneur whose career bridges impact, finance, and technology. He co-founded ventures such as Givfunds, an impact fund, and nsave, a fintech focused on financial inclusion. His ventures have attracted funding from prominent backers including Sequoia Capital, the UNDP, and Y Combinator. Today, Edward is the Chief Growth Officer of FAR.AI, an AI Safety non-profit that works to ensure advanced AI is safe and beneficial for everyone. A Rhodes Scholar, Edward holds two master\u2019s degrees from Oxford and was the Valedictorian of his class at Nanyang Technological University. His contributions have earned him recognition as an Obama Leader, the Commonwealth Youth Award for Asia, and a spot on the Forbes 30 Under 30 list.",
+  },
+  {
+    img: "/new-speakers/4.png",
+    name: "Cyrus Hodes",
+    role: "Founder, AI Safety Connect",
+    bio: "Cyrus is a Venture Partner at Lionheart Ventures, a VC fund investing in early-stage responsible AI and AI Safety. He is a co-founder of Stability AI, a leading global generative AI platform, and the founder of AI Safety Connect, a global gathering on AI Safety as well as an AI policy platform. As an expert in the Global Partnership on AI (GPAI), he has co-led the Safety and Assurance of Generative AI (SAFE) project. Cyrus is a Fellow of Practice at the Mohammed Bin Rashid School of Government in Dubai, where he leads their AI Safety initiative, Global Risk and AI Safety Preparedness (GRASP). Cyrus co-founded The Future Society\u2014a 501(c)3 incubated at Harvard Kennedy School and chaired its AI Initiative\u2014where he engaged early with global stakeholders to study and help shape the governance of AI. He served as an Advisor to the UAE Minister of Artificial Intelligence at the Prime Minister\u2019s Office. Educated at Sciences Po Paris, MA (Hons) Paris II University, M.P.A. Harvard.",
+  },
+  {
+    img: "/new-speakers/6.png",
+    name: "Sebastian Felipe Bundoc",
+  },
+  {
+    img: "/new-speakers/7.png",
+    name: "Jose Marie Antonio Miñoza",
+  },
+  {
+    img: "/new-speakers/8.png",
+    name: "Michelle Kim-Rissi",
+    role: "Co-Founder / Programme Manager, JIVAM Foundation / UN Canada / WFUNA",
+    bio: "Michelle Kim-Rissi is a sustainability, climate, and global development professional working at the intersection of sustainability, education, international cooperation, and community-driven sustainability initiatives. She currently serves in leadership, coordination, and advisory roles with various organizations including the JIVAM Foundation, the United Nations Association in Canada (UNAC), and the World Federation of United Nations Associations (WFUNA). Her broader experience includes collaborations and engagements with UNEP, UNDP initiatives, Harvard sustainability networks, youth climate coalitions, educational institutions, and international civil society organizations focused on climate action, social impact, and sustainable development. Michelle holds a Master\u2019s degree from Harvard University and is a Harvard alumni awardee for social change. Over the past decade, she has led and contributed to projects related to climate resilience, environmental education, sustainable communities, youth leadership, and health equity across local and international contexts. She has spoken, facilitated, or represented organizations at conferences, forums, and UN-related events in countries including Canada, the United States, South Korea, the United Arab Emirates, Switzerland, UK and Mexico, including engagements connected to COP, UNEA, CSW, UNGA, and many other UN advocacy forums, climate leadership events, and multilateral dialogues. Her work has included developing sustainability programs, supporting underserved and Indigenous communities, building international partnerships, and creating initiatives that connect local action to global sustainability goals. Michelle continues to advocate for collaborative and forward-thinking approaches that leverage sustainability and innovation to address global challenges. Her leadership emphasizes the importance of multilateral collaboration, community empowerment, and inclusive sustainability in shaping a more equitable and resilient future.",
+  },
+  {
+    img: "/new-speakers/9.png",
+    name: "Daniel Eriksson",
+  },
+  {
+    img: "/new-speakers/10.png",
+    name: "George Tsiatis",
+  },
+  {
+    img: "/new-speakers/11.png",
+    name: "Tiaro Paska Rivo",
+  },
+  {
+    img: "/new-speakers/12.png",
+    name: "Andreas Tjendra",
+    role: "AI National Advisor, RMIT Industry Partner",
+    bio: "Andreas Tjendra is an AI National Advisor whose expertise spans Industry, Government, and Academia, focusing on driving innovation and strategy in artificial intelligence and technology development. He has contributed to major initiatives such as the AI National Roadmap (Ministry of Communication and Digital Affairs). He has also served as a Subject Matter Expert for the Ministry of ICT, the Presidential Advisory Council, and ClimateSmart Indonesia. His work supports the integration of AI, climate, and health data into national policies and development projects. Andreas has advised over 15 governments, 50+ industries, and 5 academic institutions. He was previously with Geotech Australia and has served as a consultant for BHP Billiton, Google.org, and the ASEAN Foundation.",
+  },
+  {
+    img: "/new-speakers/13.png",
+    name: "Dr. William Tijhi",
+    role: "Deputy Director of AI Products, AI Singapore",
+    bio: "William Tjhi has nearly two decades of experience in applying machine learning to industry problems. He earned his PhD from NTU in 2008, focusing on unsupervised learning for text data. His career includes time at A*STAR, where he scaled up ML with distributed systems, and at GovTech, where he contributed to early data science efforts. As the lead NLP at Traveloka, he tackled the challenges of NLP in low-resource Bahasa Indonesia, inspiring him to initiate a program for building NLP resources for Southeast Asian languages at AI Singapore. William was a foundational engineer for AI Singapore\u2019s 100 Experiments and AI Apprenticeship Program. Currently, he drives the development of regional and more inclusive LLMs in AI Singapore\u2019s AI Products division. He also provides AI technical advisory to MDDI Translation Technology, and actively participates in regional and global AI discourses including with communities like Data Science Indonesia, Data Science SG, Cambodia\u2019s AI Forum and UNESCO Coalition of Language Diversity.",
+  },
+];
 
 /* ─── Card ─────────────────────────────────────────────── */
 
 function UpcomingSpeakerCard({
   speaker,
-  index,
   onSelect,
 }: {
-  speaker: UpcomingSpeaker | undefined;
-  index: number;
+  speaker: UpcomingSpeaker;
   onSelect: (s: UpcomingSpeaker) => void;
 }) {
-  /* Placeholder — no speaker data yet */
-  if (!speaker || !speaker.bio) {
-    return (
-      <div className="group relative aspect-[3/4] rounded-2xl overflow-hidden glass border-gradient hover:-translate-y-1 transition-transform duration-300">
-        <div className="absolute inset-0 bg-gradient-brand opacity-10 group-hover:opacity-25 transition-opacity duration-500" />
-        <div className="absolute inset-0 grid-bg opacity-30" />
-        <div className="absolute inset-0 shimmer" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-          <div className="h-12 w-12 rounded-full bg-gradient-brand animate-gradient pulse-glow mb-4" />
-          <div className="text-sm font-semibold tracking-wide">To be announced</div>
-          <div className="text-xs text-muted-foreground mt-1">2026 Cohort</div>
-        </div>
-        <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-          0{index + 1}
-        </div>
-      </div>
-    );
-  }
+  const hasBio = Boolean(speaker.bio);
 
-  /* Real speaker */
   return (
     <motion.div
       whileHover={{ y: -6 }}
       onClick={() => onSelect(speaker)}
       className="relative h-[450px] rounded-2xl overflow-hidden bg-white/5 border border-white/10 cursor-pointer group"
     >
-        {/* Portrait */}
-        <div className="absolute inset-0">
-          <Image
-            src={speaker.img}
-            alt={speaker.name}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-        </div>
+      {/* Portrait */}
+      <div className="absolute inset-0">
+        <Image
+          src={speaker.img}
+          alt={speaker.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
 
-        {/* Gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Hover dim */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
+      {/* Hover dim */}
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
 
-        {/* CTA pill — "View bio" */}
+      {/* CTA pill — only for speakers with bio */}
+      {hasBio && (
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
           <div className="translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
             <div className="glass rounded-full px-5 py-2.5 text-sm font-medium text-white flex items-center gap-2 shadow-lg">
@@ -90,15 +132,19 @@ function UpcomingSpeakerCard({
             </div>
           </div>
         </div>
+      )}
 
-        {/* Bottom text zone */}
-        <div className="absolute bottom-0 left-0 right-0 p-4">
-          <div className="text-sm font-semibold leading-tight truncate text-white">
-            {speaker.name}
-          </div>
+      {/* Bottom text zone */}
+      <div className="absolute bottom-0 left-0 right-0 p-4">
+        <div className="text-sm font-semibold leading-tight truncate text-white">
+          {speaker.name}
+        </div>
+        {speaker.role && (
           <div className="text-xs text-white/60 mt-1 truncate">
             {speaker.role}
           </div>
+        )}
+        {speaker.logo && (
           <div className="mt-3">
             <div className="inline-flex items-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
               <div className="relative h-10 w-[130px]">
@@ -112,8 +158,9 @@ function UpcomingSpeakerCard({
               </div>
             </div>
           </div>
-        </div>
-      </motion.div>
+        )}
+      </div>
+    </motion.div>
   );
 }
 
@@ -201,30 +248,35 @@ function SpeakerModal({
                 <h3 className="text-xl md:text-2xl font-bold text-white">
                   {speaker.name}
                 </h3>
-                <p className="text-sm text-white/50 mt-1">{speaker.role}</p>
+                {speaker.role && (
+                  <p className="text-sm text-white/50 mt-1">{speaker.role}</p>
+                )}
               </div>
 
-{/* Logo */}
-              <div className="mt-4">
-            <div className="inline-flex items-center bg-black/60 rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
-                  <div className="relative h-9 w-[140px]">
-                    <Image
-                      src={speaker.logo}
-                      alt=""
-                      fill
-                      sizes="140px"
-                      className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
-                    />
+              {speaker.logo && (
+                <div className="mt-4">
+                  <div className="inline-flex items-center bg-black/60 rounded-lg px-3 py-2.5 border border-white/20 shadow-sm">
+                    <div className="relative h-9 w-[140px]">
+                      <Image
+                        src={speaker.logo}
+                        alt=""
+                        fill
+                        sizes="140px"
+                        className="object-contain drop-shadow-[0_0.5px_1px_rgba(0,0,0,0.3)]"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
 
-              <hr className="my-5 border-white/10" />
-
-              {/* Bio */}
-              <p className="text-sm text-white/70 leading-relaxed">
-                {speaker.bio}
-              </p>
+              {speaker.bio && (
+                <>
+                  <hr className="my-5 border-white/10" />
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    {speaker.bio}
+                  </p>
+                </>
+              )}
             </div>
           </motion.div>
         </motion.div>
@@ -255,7 +307,7 @@ export function UpcomingSpeakers() {
                 The 2026 cohort brings in a new class of speakers; founders
                 building AI tools in Southeast Asia, policymakers at the table
                 where decisions get made, and researchers asking the questions
-                that matter. Lineup dropping soon.
+                that matter.
               </p>
             </div>
             <a
@@ -267,11 +319,10 @@ export function UpcomingSpeakers() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4">
-            {placeholders.map((s, i) => (
+            {speakers.map((s) => (
               <UpcomingSpeakerCard
-                key={i}
+                key={s.name}
                 speaker={s}
-                index={i}
                 onSelect={setSelectedSpeaker}
               />
             ))}
