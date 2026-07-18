@@ -19,7 +19,7 @@ export function CTA() {
                 rel="noopener noreferrer"
                 className="bg-white text-[#0060BA] font-semibold px-8 py-4 rounded-full hover:scale-105 transition-transform"
               >
-                Program Briefer →
+                See More
               </a>
               <a
                 href="#apply"

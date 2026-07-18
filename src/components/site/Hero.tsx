@@ -81,7 +81,7 @@ export function Hero() {
             rel="noopener noreferrer"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
           >
-            See More
+            Program Briefer
           </a>
         </motion.div>
 
