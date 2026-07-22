@@ -22,6 +22,11 @@ const speakers: UpcomingSpeaker[] = [
     bio: "Rose is an Education Specialist at the Education Practice Team, Sector Group, Asian Development Bank. Before joining ADB, she worked at the Education Commission in Washington D.C., which was co-convened by the former Director-General of UNESCO and the UN Special Envoy for Global Education. She has worked on adaptive, personalized learning; digital learning/EdTech initiatives; and studying the interface between technology and human interaction, learning, and pedagogy. She served as the Co-Chair of Harvard Alumni for Education \u2014 San Francisco Bay Area chapter. She holds a Master\u2019s degree in International Education Policy from Harvard University.",
   },
   {
+    img: "/new-speakers/kristoni.png",
+    name: "Kristoni Go",
+    role: "COO & Country Director, Enactus Philippines",
+  },
+  {
     img: "/new-speakers/2.png",
     name: "Rustam Shariq Mujtaba",
     role: "Regional Youth Champion, DTH Lab",
@@ -47,6 +52,7 @@ const speakers: UpcomingSpeaker[] = [
   {
     img: "/new-speakers/7.png",
     name: "Jose Marie Antonio Miñoza",
+    role: "Senior Data Analyst, Center for AI Research",
   },
   {
     img: "/new-speakers/8.png",
@@ -54,14 +60,14 @@ const speakers: UpcomingSpeaker[] = [
     role: "Co-Founder / Programme Manager, JIVAM Foundation / UN Canada / WFUNA",
     bio: "Michelle Kim-Rissi is a sustainability, climate, and global development professional working at the intersection of sustainability, education, international cooperation, and community-driven sustainability initiatives. She currently serves in leadership, coordination, and advisory roles with various organizations including the JIVAM Foundation, the United Nations Association in Canada (UNAC), and the World Federation of United Nations Associations (WFUNA). Her broader experience includes collaborations and engagements with UNEP, UNDP initiatives, Harvard sustainability networks, youth climate coalitions, educational institutions, and international civil society organizations focused on climate action, social impact, and sustainable development. Michelle holds a Master\u2019s degree from Harvard University and is a Harvard alumni awardee for social change. Over the past decade, she has led and contributed to projects related to climate resilience, environmental education, sustainable communities, youth leadership, and health equity across local and international contexts. She has spoken, facilitated, or represented organizations at conferences, forums, and UN-related events in countries including Canada, the United States, South Korea, the United Arab Emirates, Switzerland, UK and Mexico, including engagements connected to COP, UNEA, CSW, UNGA, and many other UN advocacy forums, climate leadership events, and multilateral dialogues. Her work has included developing sustainability programs, supporting underserved and Indigenous communities, building international partnerships, and creating initiatives that connect local action to global sustainability goals. Michelle continues to advocate for collaborative and forward-thinking approaches that leverage sustainability and innovation to address global challenges. Her leadership emphasizes the importance of multilateral collaboration, community empowerment, and inclusive sustainability in shaping a more equitable and resilient future.",
   },
-  {
-    img: "/new-speakers/9.png",
-    name: "Daniel Eriksson",
-  },
-  {
-    img: "/new-speakers/10.png",
-    name: "George Tsiatis",
-  },
+  // {
+  //   img: "/new-speakers/9.png",
+  //   name: "Daniel Eriksson",
+  // },
+  // {
+  //   img: "/new-speakers/10.png",
+  //   name: "George Tsiatis",
+  // },
   // {
   //   img: "/new-speakers/11.png",
   //   name: "Tiaro Paska Rivo",
