@@ -18,18 +18,20 @@ const speakers: UpcomingSpeaker[] = [
   {
     img: "/new-speakers/1.png",
     name: "Rose Sagun",
-    role: "Education Specialist, Asian Development Bank",
+    role: "Education Specialist, Human and Social Development Sector Office (SG-HSD), Sectors Group (SG), Asian Development Bank",
     bio: "Rose is an Education Specialist at the Education Practice Team, Sector Group, Asian Development Bank. Before joining ADB, she worked at the Education Commission in Washington D.C., which was co-convened by the former Director-General of UNESCO and the UN Special Envoy for Global Education. She has worked on adaptive, personalized learning; digital learning/EdTech initiatives; and studying the interface between technology and human interaction, learning, and pedagogy. She served as the Co-Chair of Harvard Alumni for Education \u2014 San Francisco Bay Area chapter. She holds a Master\u2019s degree in International Education Policy from Harvard University.",
   },
   {
     img: "/new-speakers/2.png",
     name: "Rustam Shariq Mujtaba",
+    role: "Regional Youth Champion, DTH Lab",
+    bio: "Rustam serves as the Southeast and East Asia Regional Youth Champion at the Digital Transformation for Health Lab (DTH-Lab), where he supports youth leadership and regional collaboration on digital health. He has experience working in the digital health ecosystem in startups and as a health regulatory, working as the Manager of Regulatory Affairs & Data Analytics at Peach Health Asia, working on the regulation and deployment of AI-enabled Software Medical Devices across Southeast Asia. Currently, he works as a Data Scientist at Singapore's Health Sciences Authority, developing AI-enabled regulatory solutions for healthcare. His interests lie at the intersection of digital health, AI governance, health diplomacy, and strengthening equitable health systems through responsible innovation.",
   },
   {
     img: "/new-speakers/3.png",
     name: "Edward Yee",
-    role: "Co-Founder, AI for Asia",
-    bio: "Edward Yee is a serial social entrepreneur whose career bridges impact, finance, and technology. He co-founded ventures such as Givfunds, an impact fund, and nsave, a fintech focused on financial inclusion. His ventures have attracted funding from prominent backers including Sequoia Capital, the UNDP, and Y Combinator. Today, Edward is the Chief Growth Officer of FAR.AI, an AI Safety non-profit that works to ensure advanced AI is safe and beneficial for everyone. A Rhodes Scholar, Edward holds two master\u2019s degrees from Oxford and was the Valedictorian of his class at Nanyang Technological University. His contributions have earned him recognition as an Obama Leader, the Commonwealth Youth Award for Asia, and a spot on the Forbes 30 Under 30 list.",
+    role: "Co-Founder, AI for Asia & GivFunds",
+    bio: "Edward Yee is a serial social entrepreneur whose career bridges impact, finance, and technology. He co-founded ventures such as Givfunds, an impact fund, and nsave, a fintech focused on financial inclusion. His ventures have attracted funding from prominent backers including Sequoia Capital, the UNDP, and Y Combinator. Today, Edward is the Chief Growth Officer of FAR.AI, an AI Safety non-profit that works to ensure advanced AI is safe and beneficial for everyone. A Rhodes Scholar, Edward holds two master\u2019s degrees from Oxford and was the Valedictorian of his class at Nanyang Technological University. His contributions have earned him recognition as an Obama Leader, the Commonwealth Youth Award for Asia, and a spot on the Forbes 30 Under 30 list. In his free time, Edward enjoys sticking his nose in a book and collecting stories from around the world. He has stood on Bangladeshi train tops, stared down bull sharks, and raced Indian autos.",
   },
   {
     img: "/new-speakers/4.png",
@@ -40,6 +42,7 @@ const speakers: UpcomingSpeaker[] = [
   {
     img: "/new-speakers/6.png",
     name: "Sebastian Felipe Bundoc",
+    role: "Senior Data Analyst, Center for AI Research",
   },
   {
     img: "/new-speakers/7.png",
@@ -59,10 +62,10 @@ const speakers: UpcomingSpeaker[] = [
     img: "/new-speakers/10.png",
     name: "George Tsiatis",
   },
-  {
-    img: "/new-speakers/11.png",
-    name: "Tiaro Paska Rivo",
-  },
+  // {
+  //   img: "/new-speakers/11.png",
+  //   name: "Tiaro Paska Rivo",
+  // },
   {
     img: "/new-speakers/12.png",
     name: "Andreas Tjendra",
