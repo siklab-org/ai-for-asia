@@ -26,7 +26,7 @@ const speakers: UpcomingSpeaker[] = [
     img: "/new-speakers/kristoni.png",
     name: "Kristoni Go",
     role: "COO & Country Director, Enactus Philippines",
-    logo: "/speaker-logos/enactus-ph.png",
+    logo: "/speaker-logos/enactus-logo.webp",
     bio: "Kristoni Go serves as the Chief Operating Officer and Country Director of Enactus Philippines, a global non-profit organization that mobilizes university students to create community impact through entrepreneurial action. In her role, she leads strategic operations, partnership development, and program management across the Philippines. Kristoni is deeply committed to youth empowerment and social innovation, working to equip the next generation of leaders with the skills and mindset to drive sustainable change. Her leadership at Enactus Philippines has expanded the organization's reach to hundreds of students nationwide, fostering a culture of purpose-driven entrepreneurship.",
   },
   {
