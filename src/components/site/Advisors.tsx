@@ -19,7 +19,7 @@ const advisors: Advisor[] = [
     name: "Morteza Mollanaghi",
     role: "Strategic Advisor | Technology, Governance & Organisational Transformation",
     badge: "Lead Strategic Advisor",
-    logo: "/speaker-logos/oversight-board.svg",
+    logo: "",
     bio: "Morteza Mollanaghi advises leaders on the intersection of technology, governance, and organisational transformation. Having built and scaled organisations across more than 20 countries, he brings deep expertise in strategy execution, organisational design, leadership, and enterprise risk. Over a 20-year career, he has worked closely with CEOs, Boards, and Founders to help organisations navigate growth, complexity, and change. His particular interest lies in the governance challenges created by emerging technologies, especially artificial intelligence, and the institutional frameworks needed to ensure innovation strengthens rather than weakens democratic society. Morteza is also the author of Help Is On The Way and is currently writing a second book on the opportunities and risks AI presents for democracy, work, and human agency.",
   },
   {
@@ -104,19 +104,21 @@ function AdvisorCard({
         <div className="text-sm text-white/70 mt-1">
           {advisor.role}
         </div>
-        <div className="mt-4">
-          <div className="inline-flex items-center bg-white/[0.4] backdrop-blur-md rounded-xl px-4 py-3 border border-white/25 shadow-lg">
-            <div className="relative h-10 w-[130px]">
-              <Image
-                src={advisor.logo}
-                alt=""
-                fill
-                sizes="130px"
-                className="object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
-              />
+        {advisor.logo && (
+          <div className="mt-4">
+            <div className="inline-flex items-center bg-white/[0.4] backdrop-blur-md rounded-xl px-4 py-3 border border-white/25 shadow-lg">
+              <div className="relative h-10 w-[130px]">
+                <Image
+                  src={advisor.logo}
+                  alt=""
+                  fill
+                  sizes="130px"
+                  className="object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Corner accent */}
@@ -224,20 +226,21 @@ function AdvisorModal({
                 <p className="text-sm text-white/50 mt-2">{advisor.role}</p>
               </div>
 
-              {/* Logo */}
-              <div className="mt-5">
-                <div className="inline-flex items-center bg-black/60 rounded-xl px-4 py-3 border border-white/25 shadow-lg">
-                  <div className="relative h-10 w-[140px]">
-                    <Image
-                      src={advisor.logo}
-                      alt=""
-                      fill
-                      sizes="140px"
-                      className="object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
-                    />
+              {advisor.logo && (
+                <div className="mt-5">
+                  <div className="inline-flex items-center bg-black/60 rounded-xl px-4 py-3 border border-white/25 shadow-lg">
+                    <div className="relative h-10 w-[140px]">
+                      <Image
+                        src={advisor.logo}
+                        alt=""
+                        fill
+                        sizes="140px"
+                        className="object-contain drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
 
               <hr className="my-6 border-white/10" />
 

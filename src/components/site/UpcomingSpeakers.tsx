@@ -50,23 +50,23 @@ const speakers: UpcomingSpeaker[] = [
     logo: "/speaker-logos/ai-safety-connect.png",
     bio: "Cyrus is a Venture Partner at Lionheart Ventures, a VC fund investing in early-stage responsible AI and AI Safety. He is a co-founder of Stability AI, a leading global generative AI platform, and the founder of AI Safety Connect, a global gathering on AI Safety as well as an AI policy platform. As an expert in the Global Partnership on AI (GPAI), he has co-led the Safety and Assurance of Generative AI (SAFE) project. Cyrus is a Fellow of Practice at the Mohammed Bin Rashid School of Government in Dubai, where he leads their AI Safety initiative, Global Risk and AI Safety Preparedness (GRASP). Cyrus co-founded The Future Society\u2014a 501(c)3 incubated at Harvard Kennedy School and chaired its AI Initiative\u2014where he engaged early with global stakeholders to study and help shape the governance of AI. He served as an Advisor to the UAE Minister of Artificial Intelligence at the Prime Minister\u2019s Office. Educated at Sciences Po Paris, MA (Hons) Paris II University, M.P.A. Harvard.",
   },
-  {
-    img: "/new-speakers/6.png",
-    name: "Sebastian Felipe Bundoc",
-    role: "Senior Data Analyst, Center for AI Research",
-    logo: "/speaker-logos/center-for-ai-research.png",
-  },
-  {
-    img: "/new-speakers/7.png",
-    name: "Jose Marie Antonio Miñoza",
-    role: "Senior Data Analyst, Center for AI Research",
-    logo: "/speaker-logos/center-for-ai-research.png",
-  },
+  // {
+  //   img: "/new-speakers/6.png",
+  //   name: "Sebastian Felipe Bundoc",
+  //   role: "Senior Data Analyst, Center for AI Research",
+  //   logo: "/speaker-logos/center-for-ai-research.png",
+  // },
+  // {
+  //   img: "/new-speakers/7.png",
+  //   name: "Jose Marie Antonio Miñoza",
+  //   role: "Senior Data Analyst, Center for AI Research",
+  //   logo: "/speaker-logos/center-for-ai-research.png",
+  // },
   {
     img: "/new-speakers/8.png",
     name: "Michelle Kim-Rissi",
     role: "Co-Founder / Programme Manager, JIVAM Foundation / UN Canada / WFUNA",
-    logo: "/speaker-logos/jivam.png",
+    logo: "https://www.unac.org/wp-content/uploads/unac-logo.webp",
     bio: "Michelle Kim-Rissi is a sustainability, climate, and global development professional working at the intersection of sustainability, education, international cooperation, and community-driven sustainability initiatives. She currently serves in leadership, coordination, and advisory roles with various organizations including the JIVAM Foundation, the United Nations Association in Canada (UNAC), and the World Federation of United Nations Associations (WFUNA). Her broader experience includes collaborations and engagements with UNEP, UNDP initiatives, Harvard sustainability networks, youth climate coalitions, educational institutions, and international civil society organizations focused on climate action, social impact, and sustainable development. Michelle holds a Master\u2019s degree from Harvard University and is a Harvard alumni awardee for social change. Over the past decade, she has led and contributed to projects related to climate resilience, environmental education, sustainable communities, youth leadership, and health equity across local and international contexts. She has spoken, facilitated, or represented organizations at conferences, forums, and UN-related events in countries including Canada, the United States, South Korea, the United Arab Emirates, Switzerland, UK and Mexico, including engagements connected to COP, UNEA, CSW, UNGA, and many other UN advocacy forums, climate leadership events, and multilateral dialogues. Her work has included developing sustainability programs, supporting underserved and Indigenous communities, building international partnerships, and creating initiatives that connect local action to global sustainability goals. Michelle continues to advocate for collaborative and forward-thinking approaches that leverage sustainability and innovation to address global challenges. Her leadership emphasizes the importance of multilateral collaboration, community empowerment, and inclusive sustainability in shaping a more equitable and resilient future.",
   },
   // {
@@ -85,7 +85,7 @@ const speakers: UpcomingSpeaker[] = [
     img: "/new-speakers/12.png",
     name: "Andreas Tjendra",
     role: "AI National Advisor, RMIT Industry Partner",
-    logo: "/speaker-logos/rmit.png",
+    logo: "",
     bio: "Andreas Tjendra is an AI National Advisor whose expertise spans Industry, Government, and Academia, focusing on driving innovation and strategy in artificial intelligence and technology development. He has contributed to major initiatives such as the AI National Roadmap (Ministry of Communication and Digital Affairs). He has also served as a Subject Matter Expert for the Ministry of ICT, the Presidential Advisory Council, and ClimateSmart Indonesia. His work supports the integration of AI, climate, and health data into national policies and development projects. Andreas has advised over 15 governments, 50+ industries, and 5 academic institutions. He was previously with Geotech Australia and has served as a consultant for BHP Billiton, Google.org, and the ASEAN Foundation.",
   },
   {
