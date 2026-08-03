@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BackgroundAtmosphere } from "@/components/site/BackgroundAtmosphere";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
+import { SpeakerLogos } from "@/components/site/SpeakerLogos";
 import { About } from "@/components/site/About";
 import { Program } from "@/components/site/Program";
 import { UpcomingSpeakers } from "@/components/site/UpcomingSpeakers";
@@ -28,6 +29,7 @@ export default function Home() {
         <BackgroundAtmosphere />
         <Nav />
         <Hero />
+        <SpeakerLogos />
         <About />
         <Program />
         <Impact />
