@@ -52,7 +52,7 @@ export function SpeakerLogos() {
       <div
         className="group flex w-max gap-12 md:gap-16 items-center"
         style={{
-          animation: "marquee-ltr 90s linear infinite",
+          animation: "marquee-ltr 200s linear infinite",
         }}
         onMouseEnter={(e) =>
           (e.currentTarget.style.animationPlayState = "paused")
@@ -66,7 +66,7 @@ export function SpeakerLogos() {
             key={i}
             src={src}
             alt=""
-            className="h-10 md:h-14 w-auto shrink-0 opacity-50 hover:opacity-100 transition-opacity duration-300"
+            className="h-10 md:h-14 w-auto shrink-0 opacity-80 hover:opacity-50 transition-opacity duration-300"
             loading="lazy"
             draggable={false}
           />
