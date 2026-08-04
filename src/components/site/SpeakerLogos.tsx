@@ -31,7 +31,7 @@ const logos = [
 
 export function SpeakerLogos() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
+    <section className="relative py-16 md:py-24 bg-black overflow-hidden">
       <style>{`
         @keyframes marquee-ltr {
           from { transform: translateX(-50%); }
@@ -46,13 +46,13 @@ export function SpeakerLogos() {
       </div>
 
       {/* Edge fades */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-r from-background to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-40 z-10 bg-gradient-to-l from-background to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 bg-gradient-to-r from-black to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 md:w-48 z-10 bg-gradient-to-l from-black to-transparent" />
 
       <div
         className="group flex w-max gap-12 md:gap-16 items-center"
         style={{
-          animation: "marquee-ltr 60s linear infinite",
+          animation: "marquee-ltr 90s linear infinite",
         }}
         onMouseEnter={(e) =>
           (e.currentTarget.style.animationPlayState = "paused")
