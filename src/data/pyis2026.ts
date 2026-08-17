@@ -396,14 +396,11 @@ export const pyisFaq: PyisFaqItem[] = [
 
 // Partner Data
 export const pyisPartners: PyisPartner[] = [
-  { name: "Khan Academy Philippines", logo: "/partners/khan-academy.png" },
-  { name: "KPMG", logo: "/partners/kpmg.png" },
-  { name: "PACSB", logo: "/partners/pacsb.png" },
-  { name: "ENEDA", logo: "/partners/eneda.png" },
-  { name: "NASEEA", logo: "/partners/naseea.png" },
-  { name: "JA Philippines", logo: "/partners/ja-philippines.png" },
-  { name: "PPSTA", logo: "/partners/ppsta.png" },
-  { name: "DOST-PCIEERD", logo: "/partners/dost-pcieerd.png" },
+  { name: "Khan Academy Philippines", logo: "/partners/khan-academy.svg" },
+  { name: "DEPED", logo: "/partners/deped.svg" },
+  { name: "EU", logo: "/partners/eu-logo.png" },
+  { name: "NYC", logo: "/partners/nyc-white.png" },
+  { name: "UN", logo: "/partners/un-logo.png" },
 ];
 
 // Journey Data
