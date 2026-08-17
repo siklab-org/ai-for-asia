@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { BackgroundAtmosphere } from "@/components/site/BackgroundAtmosphere";
-import { Nav } from "@/components/site/Nav";
 import { PyisHero } from "@/components/site/pyis/PyisHero";
 import { PyisAbout } from "@/components/site/pyis/PyisAbout";
 import { PyisThemes } from "@/components/site/pyis/PyisThemes";
@@ -32,7 +31,6 @@ export default function Pyis2026Page() {
   return (
     <main className="relative bg-background text-foreground">
       <BackgroundAtmosphere />
-      <Nav />
       <PyisHero />
       <PyisAbout />
       <PyisThemes />

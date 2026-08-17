@@ -27,7 +27,21 @@ export function PyisHero() {
         className="absolute bottom-1/4 right-10 h-80 w-80 rounded-full bg-[#C671AF] blur-3xl opacity-30"
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-32 pb-20 w-full">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-10 pb-20 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="mb-8"
+        >
+          <a
+            href="/"
+            className="glass text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+          >
+            ← Return to AI for ASIA
+          </a>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
