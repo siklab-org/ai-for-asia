@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "motion/react";
 import Image from "next/image";
 
@@ -43,14 +45,22 @@ export function Nav() {
               </a>
             ))}
           </nav>
-          <a
-            href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-brand animate-gradient text-white text-sm font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
-          >
-            See More
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-brand animate-gradient text-white text-sm font-medium px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
+            >
+              See More
+            </a>
+            <a
+              href="/pyis2026"
+              className="glass text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+            >
+              PYIS 2026
+            </a>
+          </div>
         </motion.div>
       </div>
     </header>
