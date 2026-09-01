@@ -1,9 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { Reveal } from "../Reveal";
-import { ChevronDown } from "lucide-react";
 
 const pricingCards = [
   {
@@ -40,8 +38,6 @@ const pricingCards = [
 ];
 
 export function PyisRegistration() {
-  const [showPackages, setShowPackages] = useState(false);
-
   return (
     <section id="register" className="relative py-32 overflow-hidden">
       <div className="relative z-10 mx-auto max-w-6xl px-6">
@@ -104,46 +100,14 @@ export function PyisRegistration() {
               Accommodation, transportation, meals, and other logistical
               requirements are not included and may be arranged separately.
             </p>
-            <button
-              onClick={() => setShowPackages(!showPackages)}
-              className="flex items-center gap-2 mx-auto text-sm text-gradient hover:opacity-80 transition-opacity"
+            <a
+              href="https://docs.google.com/document/d/1pX_Gcdk9xjH-BLaPI3mXPJhw7UYCEKa1Hi3uQHzrOmc/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 mx-auto w-fit text-sm text-gradient hover:opacity-80 transition-opacity"
             >
-              View Logistical Packages
-              <motion.div
-                animate={{ rotate: showPackages ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ChevronDown className="w-4 h-4" />
-              </motion.div>
-            </button>
-            <AnimatePresence>
-              {showPackages && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
-                >
-                  <div className="mt-4 text-sm text-muted-foreground">
-                    <p>
-                      Optional logistical packages may include accommodation,
-                      transportation, airport transfers, and other support
-                      services. Final details and rates will be communicated
-                      separately.
-                    </p>
-                    <a
-                      href="https://docs.google.com/document/d/1pX_Gcdk9xjH-BLaPI3mXPJhw7UYCEKa1Hi3uQHzrOmc/edit?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gradient hover:opacity-80 transition-opacity mt-2 inline-block"
-                    >
-                      View Package Details →
-                    </a>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+              View Logistical Packages →
+            </a>
           </div>
         </Reveal>
       </div>
