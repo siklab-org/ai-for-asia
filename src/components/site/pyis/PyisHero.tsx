@@ -119,10 +119,10 @@ export function PyisHero() {
                 className="h-10 w-auto opacity-80 brightness-0 invert"
               />
               <Image
-                src="/speaker-logos/enactus.png"
+                src="/speaker-logos/enactus-logo.webp"
                 alt="Enactus Philippines"
-                width={120}
-                height={40}
+                width={80}
+                height={45}
                 className="h-10 w-auto opacity-80 brightness-0 invert"
               />
             </div>

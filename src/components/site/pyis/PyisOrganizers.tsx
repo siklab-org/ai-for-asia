@@ -54,10 +54,10 @@ export function PyisOrganizers() {
               className="glass rounded-2xl p-8 hover:bg-white/[0.07] transition-all duration-500"
             >
               <Image
-                src="/speaker-logos/enactus.png"
+                src="/speaker-logos/enactus-logo.webp"
                 alt="Enactus Philippines"
-                width={120}
-                height={40}
+                width={80}
+                height={45}
                 className="h-10 w-auto opacity-80 brightness-0 invert mb-6"
               />
               <h3 className="text-xl font-bold mb-4">Enactus Philippines</h3>
