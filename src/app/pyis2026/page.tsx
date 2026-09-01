@@ -10,7 +10,6 @@ import { PyisJourney } from "@/components/site/pyis/PyisJourney";
 import { PyisWhoShouldJoin } from "@/components/site/pyis/PyisWhoShouldJoin";
 import { PyisRegistration } from "@/components/site/pyis/PyisRegistration";
 import { PyisWhyParticipate } from "@/components/site/pyis/PyisWhyParticipate";
-import { PyisPartners } from "@/components/site/pyis/PyisPartners";
 import { PyisHowToRegister } from "@/components/site/pyis/PyisHowToRegister";
 import { PyisFaq } from "@/components/site/pyis/PyisFaq";
 import { PyisFooter } from "@/components/site/pyis/PyisFooter";
@@ -41,7 +40,6 @@ export default function Pyis2026Page() {
       <PyisWhoShouldJoin />
       <PyisRegistration />
       <PyisWhyParticipate />
-      <PyisPartners />
       <PyisHowToRegister />
       <PyisFaq />
       <PyisFooter />
