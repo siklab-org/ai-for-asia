@@ -2,6 +2,8 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
+import { ChevronDown } from "lucide-react";
 
 const links = [
   { href: "#about", label: "About" },
@@ -54,12 +56,31 @@ export function Nav() {
             >
               See More
             </a>
-            <a
-              href="/pyis2026"
-              className="glass text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
-            >
-              PYIS 2026
-            </a>
+            <div className="relative group">
+              <Link
+                href="/pyis2026"
+                className="glass text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition-colors inline-flex items-center gap-1.5"
+              >
+                PYIS 2026
+                <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
+              </Link>
+              <div className="absolute right-0 top-full pt-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200">
+                <div className="glass rounded-2xl p-2 w-72">
+                  <Link
+                    href="/pyis2026"
+                    className="block rounded-xl px-4 py-2.5 text-sm text-foreground hover:bg-white/10 transition-colors"
+                  >
+                    Philippine Youth Innovation Summit
+                  </Link>
+                  <Link
+                    href="/ayca2026"
+                    className="block rounded-xl px-4 py-2.5 text-sm text-foreground hover:bg-white/10 transition-colors"
+                  >
+                    Asian Youth Champion Awards
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

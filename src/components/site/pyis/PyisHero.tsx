@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export function PyisHero() {
   return (
@@ -32,7 +33,7 @@ export function PyisHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          className="mb-8"
+          className="mb-8 flex flex-wrap items-center gap-3"
         >
           <a
             href="/"
@@ -40,6 +41,12 @@ export function PyisHero() {
           >
             ← Return to AI for ASIA
           </a>
+          <Link
+            href="/ayca2026"
+            className="glass text-foreground text-sm font-medium px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+          >
+            Asian Youth Champion Awards →
+          </Link>
         </motion.div>
 
         <motion.div
