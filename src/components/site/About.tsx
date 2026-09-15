@@ -91,7 +91,7 @@ export function About() {
                 { n: "12", l: "Nations" },
                 { n: "120", l: "Fellows" },
               ].map((s, i) => (
-                <Reveal key={s.n} delay={0.2 + i * 0.1}>
+                <Reveal key={s.l} delay={0.2 + i * 0.1}>
                   <div className="text-center">
                     <div className="text-5xl md:text-7xl font-bold text-gradient tracking-tight">
                       {s.n}
