@@ -67,12 +67,12 @@ export function InteractiveMap() {
       doubleClickZoom: false,
       keyboard: false,
       zoomControl: false,
-      attributionControl: false,
-
     });
 
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-      subdomains: "abcd",
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      subdomains: "abc",
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
     L.control
@@ -85,6 +85,9 @@ export function InteractiveMap() {
     const style = document.createElement("style");
     style.className = "fellow-pin-base";
     style.textContent = `
+      .leaflet-tile-pane {
+        filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(88%);
+      }
       .fellow-pin {
         width: 24px;
         height: 24px;
@@ -163,6 +166,14 @@ export function InteractiveMap() {
       .leaflet-control-zoom {
         border: none !important;
         box-shadow: none !important;
+      }
+      .leaflet-control-attribution {
+        background: rgba(15,15,25,0.7) !important;
+        color: rgba(255,255,255,0.5) !important;
+        font-size: 10px !important;
+      }
+      .leaflet-control-attribution a {
+        color: rgba(255,255,255,0.65) !important;
       }
     `;
     document.head.appendChild(style);

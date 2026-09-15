@@ -57,13 +57,7 @@ const speakers: UpcomingSpeaker[] = [
     logo: "/speaker-logos/center-for-ai-research.png",
     bio: "Eli Bundoc has deep roots in the education sector, having worked with the Department of Education, Commission on Higher Education, and the Second Congressional Commission on Education. His roles have included policy writing, grant management, stakeholder engagement, and data analysis. Eli\u2019s consistent work with government data and his understanding of its importance in planning and policy-making led him to pursue and complete his Master of Science in Data Science degree at the Asian Institute of Management. Currently at the Education Center for AI Research (ECAIR), Eli combines his background in education with his data science skills to harness machine learning and artificial intelligence solutions for the public education sector.",
   },
-  {
-    img: "/new-speakers/7.png",
-    name: "Jose Marie Antonio Mi\u00F1oza",
-    role: "Senior Data Scientist, Education Center for AI Research",
-    logo: "/speaker-logos/center-for-ai-research.png",
-    bio: "Joma Mi\u00F1oza is a Senior Data Scientist at the Education Center for AI Research (ECAIR), where he leads diverse research initiatives that apply machine learning and data-driven methods to address key challenges in education and environmental science. At ECAIR, Joma spearheads the LIGTAS Multi-Hazard Educational Impact Modeling project, using Bayesian networks to analyze the effects of natural disasters on student learning proficiency. His work also includes developing generative models for ocean floor mapping, using satellite imagery for carbon stock estimation, and creating tools to assess the environmental footprint of AI models. Previously, as Lead Data Scientist at Aboitiz Data Innovation, he led critical data science projects for a major Philippine bank and developed large-scale recommendation engines. He also developed AI models for cancer research and an early warning system for a telehealth consultation system for influenza-like illness, helping indigenous communities as a consultant for the Center for Informatics at the University of San Agustin. Joma holds a Master of Science in Computer Science from the University of the Philippines Diliman and graduated Magna Cum Laude from Far Eastern University with a Bachelor of Science in Applied Mathematics with Information Technology. As an ELLIS Summer School scholar at the Max Planck Institute for Biogeochemistry in Jena, Germany, his research focuses on AI for Science, specifically for Earth and climate sciences.",
-  },
+
   {
     img: "/new-speakers/8.png",
     name: "Michelle Kim-Rissi",
