@@ -42,6 +42,7 @@ export function CTA() {
                   alt="Siklab Pilipinas"
                   width={100}
                   height={34}
+                  style={{ height: "auto" }}
                   className="h-9 w-auto opacity-80 brightness-0 invert"
                 />
                 <span className="hidden sm:block w-px h-8 bg-white/20" />
@@ -50,6 +51,7 @@ export function CTA() {
                   alt="United Nations"
                   width={80}
                   height={40}
+                  style={{ height: "auto" }}
                   className="h-10 w-auto opacity-80"
                 />
                 <Image
@@ -57,6 +59,7 @@ export function CTA() {
                   alt="European Union"
                   width={100}
                   height={40}
+                  style={{ height: "auto" }}
                   className="h-9 w-auto opacity-80"
                 />
                 <Image
@@ -64,6 +67,7 @@ export function CTA() {
                   alt="ASEAN"
                   width={100}
                   height={40}
+                  style={{ height: "auto" }}
                   className="h-8 w-auto opacity-80"
                 />
                 <Image
@@ -71,6 +75,7 @@ export function CTA() {
                   alt="Asian Development Bank"
                   width={100}
                   height={34}
+                  style={{ height: "auto" }}
                   className="h-9 w-auto opacity-80"
                 />
                 <Image
@@ -78,6 +83,7 @@ export function CTA() {
                   alt="Enactus"
                   width={100}
                   height={40}
+                  style={{ height: "auto" }}
                   className="h-9 w-auto opacity-80"
                 />
                 <Image
@@ -85,6 +91,7 @@ export function CTA() {
                   alt="National Youth Council Singapore"
                   width={100}
                   height={40}
+                  style={{ height: "auto" }}
                   className="h-14 w-auto opacity-80"
                 />
               </div>

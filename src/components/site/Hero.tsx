@@ -112,6 +112,7 @@ export function Hero() {
               alt="Siklab Pilipinas"
               width={120}
               height={40}
+              style={{ height: "auto" }}
               className="h-10 w-auto opacity-80 brightness-0 invert"
             />
           </div>

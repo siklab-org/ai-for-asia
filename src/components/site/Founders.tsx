@@ -52,6 +52,7 @@ function FounderCard({
             src={founder.img}
             alt={founder.name}
             fill
+            sizes="(max-width: 767px) 100vw, calc(42rem / 2)"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
         </div>
@@ -197,6 +198,7 @@ function FounderModal({
                 src={founder.img}
                 alt={founder.name}
                 fill
+                sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

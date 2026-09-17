@@ -54,6 +54,7 @@ function AdvisorCard({
             src={advisor.img}
             alt={advisor.name}
             fill
+            sizes="(max-width: 767px) 100vw, calc(42rem / 2)"
             className="object-cover transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
