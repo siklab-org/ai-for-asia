@@ -7,6 +7,7 @@ import { Hero } from "@/components/site/Hero";
 import { SpeakerLogos } from "@/components/site/SpeakerLogos";
 import { About } from "@/components/site/About";
 import { Program } from "@/components/site/Program";
+import { FeaturedMessage } from "@/components/site/FeaturedMessage";
 import { UpcomingSpeakers } from "@/components/site/UpcomingSpeakers";
 import { Speakers } from "@/components/site/Speakers";
 import { Founders } from "@/components/site/Founders";
@@ -34,6 +35,7 @@ export default function Home() {
         <Program />
         <Impact />
         <Partners />
+        <FeaturedMessage />
         <UpcomingSpeakers />
         <Speakers />
         <Founders />
