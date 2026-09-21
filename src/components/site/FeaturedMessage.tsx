@@ -11,7 +11,7 @@ const featured = {
   name: "Anselmo S. H. Lee",
   role: "Ambassador for Human Rights, Peace and Democracy, RoK Government",
   logo: "/speaker-logos/southkorea.webp",
-  logoLabel: "RoK Government",
+  logoLabel: "Government of the Republic of Korea",
   session: "Session 7 · AI for Sustainable Development",
   program: "AI for Asia Fellowship 2026",
   date: "September 5, 2026",
