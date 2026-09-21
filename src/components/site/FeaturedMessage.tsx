@@ -180,7 +180,7 @@ export function FeaturedMessage() {
                 <p className="text-xs text-white/70 mt-1 leading-relaxed">
                   {featured.role}
                 </p>
-                <div className="mt-4 inline-flex items-center gap-2 bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20">
+                <div className="mt-4 flex w-full items-center justify-center bg-white/[0.35] backdrop-blur-md rounded-lg px-3 py-2.5 border border-white/20">
                   <div className="relative h-8 w-[110px]">
                     <Image
                       src={featured.logo}
