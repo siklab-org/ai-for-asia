@@ -304,27 +304,26 @@ export function FeaturedMessage() {
                     {/* ── Chapter 01 · The Theme ── */}
                     {active === 0 && (
                       <Chapter>
-                        <p className="text-white/90">
+                        <p className="font-serif text-2xl md:text-3xl italic leading-snug text-white/95">
                           Dear fellows from ASEAN and the Republic of Korea,
                         </p>
                         <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                           Michelle Kim-Rissi · Shellan Sailing · Siklab Pilipinas · National
                           Youth Council Singapore · distinguished guests, colleagues and friends
                         </p>
-                        <p className="text-white/90">Warm greetings from Seoul.</p>
+                        <p className="text-white/85">Warm greetings from Seoul.</p>
                         <p className="text-white/80">
                           It is a great pleasure to join you for Session 7 of the AI for Asia
-                          Fellowship 2026, bringing together 120 young leaders from across the
-                          region. Today&apos;s theme asks not only what AI{" "}
-                          <em className="text-white">can</em> do, but what it{" "}
-                          <em className="text-white">should</em> do — whom it should serve, and
-                          what values and rules should guide it.
+                          Fellowship 2026, with 120 young leaders from across the region. Today
+                          we ask not only what AI <em className="text-white">can</em> do, but
+                          what it <em className="text-white">should</em> do — whom it should
+                          serve, and what values and rules should guide it.
+                        </p>
+                        <p className="font-serif text-xl md:text-2xl leading-relaxed text-white/90 italic">
+                          “How we develop and govern AI today will shape the rights,
+                          opportunities, security, and environment of generations yet to come.”
                         </p>
                         <PactCallout />
-                        <p className="text-white/80">
-                          How we develop and govern AI today will shape the rights, opportunities,
-                          security, and environment of generations yet to come.
-                        </p>
                       </Chapter>
                     )}
 
