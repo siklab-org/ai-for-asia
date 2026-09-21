@@ -9,9 +9,9 @@ import { useState, type ReactNode } from "react";
 const featured = {
   img: "/new-speakers/Anselmo.png",
   name: "Anselmo S. H. Lee",
-  role: "Ambassador for Human Rights, Peace and Democracy, Republic of Korea",
+  role: "Ambassador for Human Rights, Peace and Democracy, RoK Government",
   logo: "/speaker-logos/southkorea.webp",
-  logoLabel: "Government of the Republic of Korea",
+  logoLabel: "RoK Government",
   session: "Session 7 · AI for Sustainable Development",
   program: "AI for Asia Fellowship 2026",
   date: "September 5, 2026",
@@ -307,10 +307,11 @@ export function FeaturedMessage() {
                         <p className="font-serif text-2xl md:text-3xl italic leading-snug text-white/95">
                           Dear fellows from ASEAN and the Republic of Korea,
                         </p>
-                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                          Michelle Kim-Rissi · Shellan Sailing · Siklab Pilipinas · National
-                          Youth Council Singapore · distinguished guests, colleagues and friends
-                        </p>
+<p className="text-sm text-white/75 leading-relaxed">
+  To Michelle Kim-Rissi, Shellan Sailing, our partners at Siklab Pilipinas and
+  the National Youth Council Singapore — and to all distinguished guests,
+  colleagues and friends,
+</p>
                         <p className="text-white/85">Warm greetings from Seoul.</p>
                         <p className="text-white/80">
                           It is a great pleasure to join you for Session 7 of the AI for Asia
