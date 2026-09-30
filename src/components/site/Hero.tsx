@@ -76,7 +76,7 @@ export function Hero() {
             Learn more
           </a>
           <a
-            href="/%5BAI%20for%20Asia%202026%5D%20Program%20Briefer.pdf"
+            href="https://canva.link/bxdbfbn4woy1me5"
             target="_blank"
             rel="noopener noreferrer"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
