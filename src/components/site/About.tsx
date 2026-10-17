@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Reveal } from "./Reveal";
+import { CohortBackdrop } from "./CohortBackdrop";
 
 const pillars = [
   {
@@ -43,9 +44,17 @@ const pillars = [
   },
 ];
 
+const stats = [
+  { n: "12", l: "Weeks" },
+  { n: "12", l: "Nations" },
+  { n: "120", l: "Fellows" },
+];
+
 export function About() {
   return (
-    <section id="about" className="relative py-32 overflow-hidden">
+    <section id="about" className="relative isolate py-28 md:py-40 overflow-hidden">
+      <CohortBackdrop />
+
       <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background via-background/90 to-transparent pointer-events-none z-10" />
 
       <motion.div
@@ -83,62 +92,69 @@ export function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-16 grid md:grid-cols-5 gap-12 md:gap-16 items-start">
-          <div className="md:col-span-3 relative">
-            <div className="grid grid-cols-3 gap-4 md:gap-8 p-6 md:p-10 rounded-3xl bg-white/[0.02] border border-white/[0.05]">
-              {[
-                { n: "12", l: "Weeks" },
-                { n: "12", l: "Nations" },
-                { n: "120", l: "Fellows" },
-              ].map((s, i) => (
-                <Reveal key={s.l} delay={0.2 + i * 0.1}>
-                  <div className="text-center">
-                    <div className="text-5xl md:text-7xl font-bold text-gradient tracking-tight">
+        <div className="mt-14 grid gap-6 md:mt-20 md:grid-cols-12 md:gap-8">
+          <Reveal className="md:col-span-7" delay={0.15}>
+            <div className="relative h-full overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.02] p-8 md:p-10">
+              <div className="absolute left-0 top-8 bottom-8 w-[2px] rounded-full bg-gradient-to-b from-brand-3 via-brand-4 to-brand-5" />
+              <p className="pl-5 text-lg leading-relaxed text-muted-foreground md:text-xl">
+                Southeast Asia isn&apos;t waiting for AI to arrive. It&apos;s already here.{" "}
+                <span className="font-medium text-foreground">AI for Asia </span>
+                trains the next wave of ASEAN leaders to shape how it&apos;s built, governed,
+                and deployed across the region.
+              </p>
+              <p className="mt-5 pl-5 text-lg leading-relaxed text-muted-foreground md:text-xl">
+                Fellows learn from industry leaders, UN officials, and policy makers through
+                live sessions, mentorship, and a capstone project they actually ship.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal className="md:col-span-5" delay={0.25}>
+            <div className="flex h-full flex-col justify-center rounded-3xl border border-white/[0.06] bg-white/[0.02] px-8 py-4 md:px-10 md:py-6">
+              {stats.map((s, i) => (
+                <Reveal key={s.l} delay={0.3 + i * 0.08}>
+                  <div
+                    className={`flex items-baseline gap-5 py-5 ${
+                      i > 0 ? "border-t border-white/[0.06]" : ""
+                    }`}
+                  >
+                    <span className="text-gradient text-4xl font-bold tracking-tight tabular-nums md:text-5xl">
                       {s.n}
-                    </div>
-                    <div className="mt-1 text-xs md:text-sm text-muted-foreground tracking-wide uppercase">
+                    </span>
+                    <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
                       {s.l}
-                    </div>
+                    </span>
                   </div>
                 </Reveal>
               ))}
             </div>
-          </div>
-
-          <div className="md:col-span-2 relative">
-            <Reveal delay={0.2}>
-              <div className="relative pl-6">
-                <div className="absolute left-0 top-0 bottom-0 w-[2px] rounded-full bg-gradient-to-b from-brand-3 via-brand-4 to-brand-5" />
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Southeast Asia isn&apos;t waiting for AI to arrive. It&apos;s already here.{" "}
-                  <span className="text-foreground font-medium">AI for Asia </span> trains the next wave of ASEAN leaders to shape how it&apos;s built, governed, and deployed across the region.
-                </p>
-                <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  Fellows learn from industry leaders, UN officials, and policy makers through live sessions, mentorship, and a capstone project they actually ship.
-                </p>
-              </div>
-            </Reveal>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-5">
+        <div className="mt-6 grid gap-5 md:mt-8 md:grid-cols-3">
           {pillars.map((p, i) => (
-            <Reveal key={p.title} delay={0.3 + i * 0.1}>
-              <div className="group glass rounded-2xl p-7 hover:bg-white/[0.07] transition-all hover:-translate-y-1 duration-500">
-                <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {p.icon}
+            <Reveal key={p.title} delay={0.2 + i * 0.08}>
+              <div className="group glass h-full rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1 hover:bg-white/[0.09]">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-brand flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110">
+                    {p.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold md:text-lg">{p.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      {p.desc}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="mt-5 text-base md:text-lg font-semibold">{p.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               </div>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={0.5}>
-          <div className="flex items-center justify-center gap-4 mt-20">
+          <div className="mt-20 flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="w-1.5 h-1.5 rounded-full bg-gradient-brand" />
+            <div className="bg-gradient-brand h-1.5 w-1.5 rounded-full" />
             <div className="h-px w-16 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           </div>
         </Reveal>

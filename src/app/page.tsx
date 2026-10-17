@@ -5,11 +5,8 @@ import { BackgroundAtmosphere } from "@/components/site/BackgroundAtmosphere";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { SpeakerLogos } from "@/components/site/SpeakerLogos";
-import { About } from "@/components/site/About";
 import { Program } from "@/components/site/Program";
 import { FeaturedMessage } from "@/components/site/FeaturedMessage";
-import { UpcomingSpeakers } from "@/components/site/UpcomingSpeakers";
-import { Speakers } from "@/components/site/Speakers";
 import { Founders } from "@/components/site/Founders";
 import { Advisors } from "@/components/site/Advisors";
 import { Impact } from "@/components/site/Impact";
@@ -31,13 +28,10 @@ export default function Home() {
         <Nav />
         <Hero />
         <SpeakerLogos />
-        <About />
         <Program />
         <Impact />
         <Partners />
         <FeaturedMessage />
-        <UpcomingSpeakers />
-        <Speakers />
         <Founders />
         <Advisors />
         <Fellows />

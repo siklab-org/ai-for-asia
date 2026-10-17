@@ -2,17 +2,23 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "#about", label: "About" },
+  { href: "/about", label: "About" },
   { href: "#program", label: "Program" },
-  { href: "#upcoming", label: "Upcoming" },
-  { href: "#speakers", label: "Past Speakers" },
+  { href: "/upcoming", label: "Upcoming" },
+  { href: "/speakers", label: "Past Speakers" },
   { href: "#fellows", label: "Fellows" },
   { href: "#contact", label: "Contact" },
 ];
 
 export function Nav() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const resolve = (href: string) =>
+    !isHome && href.startsWith("#") ? `/${href}` : href;
+
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto mt-4 max-w-6xl px-4">
@@ -22,7 +28,7 @@ export function Nav() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="glass backdrop-blur-sm rounded-full flex items-center justify-between px-3 py-2.5"
         >
-          <a href="#top" className="flex items-center gap-2.5 pl-2">
+          <a href={isHome ? "#top" : "/"} className="flex items-center gap-2.5 pl-2">
             <Image
               src="/logo.png"
               alt="AI for ASIA"
@@ -38,7 +44,7 @@ export function Nav() {
             {links.map((l) => (
               <a
                 key={l.href}
-                href={l.href}
+                href={resolve(l.href)}
                 className="px-3 py-1.5 rounded-full text-muted-foreground hover:text-foreground transition-colors"
               >
                 {l.label}

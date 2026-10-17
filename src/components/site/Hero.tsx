@@ -70,7 +70,7 @@ export function Hero() {
           className="mt-10 flex flex-wrap gap-3"
         >
           <a
-            href="#about"
+            href="/about"
             className="glass text-foreground font-medium px-7 py-3.5 rounded-full hover:bg-white/10 transition-colors"
           >
             Learn more
